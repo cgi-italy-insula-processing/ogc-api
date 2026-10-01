@@ -1,0 +1,6 @@
+description: >-
+  Information about the available processes
+content:
+  application/json:
+    schema:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processList.yaml"

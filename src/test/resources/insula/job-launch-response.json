@@ -1,0 +1,38 @@
+{
+  "id" : 4108,
+  "extId" : "6eda98b6-ad72-4383-a3c5-f882a8bc006b",
+  "created": "2025-02-06T14:51:15Z",
+  "lastUpdated": "2025-02-06T14:51:15Z",
+  "startTime" : null,
+  "endTime" : null,
+  "status" : "PENDING",
+  "phase" : "CREATED",
+  "workerId" : null,
+  "stage" : null,
+  "guiUrl" : null,
+  "guiEndpoint" : null,
+  "queuePosition" : -1,
+  "outputs" : null,
+  "parent" : false,
+  "costQuotation" : {
+    "cost" : 1,
+    "recurrence" : "HOURLY"
+  },
+  "inputTile" : null,
+  "inputDate" : null,
+  "_links" : {
+    "self" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108"
+    },
+    "job" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108{?projection}",
+      "templated" : true
+    },
+    "logs" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108/logs"
+    },
+    "cancel" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108/cancel"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "serviceName",
+  "description": null,
+  "keywords": [],
+  "metadata": [],
+  "id": "4421",
+  "processID": "http://localhost/testogcapi/processes/70",
+  "type": null,
+  "request": null,
+  "status": ".*",
+  "message": ".*",
+  "exception": null,
+  "created": "2025-02-06T14:51:15Z",
+  "started": null,
+  "finished": null,
+  "updated": "2025-02-06T14:51:15Z",
+  "progress": ".*",
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/jobs/4421",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": ".*"
+    }
+  ]
+}

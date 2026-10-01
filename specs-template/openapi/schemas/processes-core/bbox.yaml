@@ -1,0 +1,10 @@
+type: object
+required:
+  - bbox
+properties:
+  bbox:
+    type: array
+    items:
+      type: number
+  crs:
+    $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/bbox-def-crs.yaml"

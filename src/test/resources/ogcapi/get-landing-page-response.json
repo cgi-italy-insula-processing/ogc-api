@@ -1,0 +1,28 @@
+{
+  "title": "Insula OGC API Processes Backend",
+  "description": "Insula REST API endpoints compliant with OGC Application Package Specification.",
+  "attribution": null,
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/?f=application%2Fjson",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Landing page"
+    },
+    {
+      "href": "http://localhost/testogcapi/api?f=application%2Fjson",
+      "rel": "service-desc",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "API page"
+    },
+    {
+      "href": "http://localhost/testogcapi/conformance?f=application%2Fjson",
+      "rel": "http://www.opengis.net/def/rel/ogc/1.0/conformance",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Conformance Classes"
+    }
+  ]
+}

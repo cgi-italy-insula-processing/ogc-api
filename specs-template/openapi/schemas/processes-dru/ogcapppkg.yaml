@@ -1,0 +1,14 @@
+type: object
+required:
+  - executionUnit
+properties:
+  processDescription:
+    type: object
+    required:
+    - process
+    properties:
+      process:
+        $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/process.yaml"
+  executionUnit:
+    oneOf:
+      - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/link.yaml"

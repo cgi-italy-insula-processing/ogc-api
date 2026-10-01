@@ -1,0 +1,135 @@
+{
+  "id" : 147,
+  "name" : "sardem-sarsen",
+  "description" : "This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus.",
+  "type" : "PROCESSOR",
+  "dockerTag" : "eopaas/sardem-sarsen",
+  "stripProxyPath" : true,
+  "licence" : "OPEN",
+  "status" : "IN_DEVELOPMENT",
+  "serviceDescriptor" : {
+    "id" : "sardem-sarsen",
+    "title" : "sardem-sarsen",
+    "description" : "This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus.",
+    "version" : "N/A",
+    "port" : null,
+    "groupId" : null,
+    "storeSupported" : false,
+    "statusSupported" : false,
+    "serviceType" : null,
+    "serviceProvider" : null,
+    "dataInputs" : [ {
+      "id" : "bbox",
+      "title" : null,
+      "description" : null,
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "true",
+        "format" : "OTHER"
+      },
+      "inputBinding" : {
+        "position" : 1
+      }
+    }, {
+      "id" : "stac_asset_name",
+      "title" : "asset name",
+      "description" : "stac asset name",
+      "minOccurs" : 0,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string",
+        "value" : "PRODUCT"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "true",
+        "format" : "OTHER"
+      },
+      "inputBinding" : {
+        "position" : 3
+      }
+    }, {
+      "id" : "stac_catalog_folder",
+      "title" : "catalog folder",
+      "description" : "stac catalog folder",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "false",
+        "format" : "CATALOGUE",
+        "type" : "STAC"
+      },
+      "inputBinding" : {
+        "position" : 2
+      }
+    } ],
+    "dataOutputs" : [ {
+      "id" : "outputs_result",
+      "title" : "output",
+      "description" : "outputs result",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "false",
+        "format" : "CATALOGUE",
+        "type" : "STAC"
+      }
+    } ],
+    "metadata" : null,
+    "dockerCommand" : "/app/sardem-sarsen/sardem-sarsen.sh",
+    "dockerArguments" : [ ],
+    "parallelInputsKey" : null
+  },
+  "serviceFilesUri" : null,
+  "additionalMounts" : { },
+  "dockerBuildInfo" : {
+    "lastBuiltFingerprint" : null,
+    "errorMessage" : null,
+    "dockerBuildStatus" : "COMPLETED"
+  },
+  "requiredResources" : null,
+  "externalServiceUri" : null,
+  "port" : "8080/tcp",
+  "groupId" : 0,
+  "cwl" : {
+    "url" : "https://raw.githubusercontent.com/MAAP-Project/sardem-sarsen/refs/heads/esa-ogc/nasa/ogc/workflows/process_sardem-sarsen_mlucas_nasa_ogc.cwl",
+    "document" : "document"
+  },
+  "dataSourceName" : "PLATFORM_SERVICE_sardem-sarsen",
+  "_embedded" : {
+    "owner" : {
+      "role" : "ADMIN",
+      "name" : "valerio.trenta",
+      "id" : 9,
+      "_links" : {
+        "self" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "templated" : true
+        }
+      }
+    }
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/services/147",
+      "rel" : "self"
+    }
+  }
+}

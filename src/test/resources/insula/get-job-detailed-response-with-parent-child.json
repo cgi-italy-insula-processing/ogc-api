@@ -1,0 +1,136 @@
+{
+  "outputs": {
+    "outputOne": [
+      "eopaas://outputProduct/c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputOne/SampleGeotiff-1.tif"
+    ],
+    "outputTwo": [
+      "eopaas://outputProduct/c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputTwo/SampleGeotiff-2.tif"
+    ]
+  },
+  "serviceName": "serviceName",
+  "serviceId" : 70,
+  "parent": false,
+  "guiUrl": null,
+  "stage": null,
+  "queuePosition": -1,
+  "phase": "CREATED",
+  "access": {
+    "published": false,
+    "publishRequested": false,
+    "currentLevel": "SUPERUSER"
+  },
+  "outputFiles": [
+    {
+      "access": {
+        "published": false,
+        "publishRequested": false,
+        "currentLevel": "SUPERUSER"
+      },
+      "restoId": "9d517a36-02ff-5c0f-b737-db28fe0a9fa6",
+      "filename": "c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputOne/SampleGeotiff-1.tif",
+      "type": "OUTPUT_PRODUCT",
+      "owner": {
+        "role": "ADMIN",
+        "name": "valerio.trenta",
+        "id": 9,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+            "templated": true
+          }
+        }
+      },
+      "id": 4864,
+      "_links": {
+        "download": {
+          "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/4864{?projection}/dl",
+          "rel": "self",
+          "templated": true
+        }
+      }
+    },
+    {
+      "access": {
+        "published": false,
+        "publishRequested": false,
+        "currentLevel": "SUPERUSER"
+      },
+      "restoId": "9d517a36-02ff-5c0f-b737-db28fe0a9fa6",
+      "filename": "c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputTwo/SampleGeotiff-2.tif",
+      "type": "OUTPUT_PRODUCT",
+      "owner": {
+        "role": "ADMIN",
+        "name": "valerio.trenta",
+        "id": 9,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+            "templated": true
+          }
+        }
+      },
+      "id": 4865,
+      "_links": {
+        "download": {
+          "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl",
+          "rel": "self",
+          "templated": true
+        }
+      }
+    }
+  ],
+  "extId": "c7d6fedd-5e2d-4a31-b359-95c69e16ca92",
+  "status": "PENDING",
+  "config": {
+    "id": 3320,
+    "inputs": {
+      "collection": [
+        "{\"outputOne\":\"eopaasb469865a5b47409da16cd843f2123b6a\", \"outputTwo\":\"eopaasb469865a5b47409da16cd843f2123b6b\"}"
+      ],
+      "geoServerSpec": [
+        "{\"outputs\":{\"layerName\":\"test-labels-out\",\"geoserverType\":\"SHAPEFILE_POSTGIS_IMPORT\"}}"
+      ],
+      "inputs": [
+        "eopaas://refData/18/napoli.zip"
+      ]
+    },
+    "label": null,
+    "systematicParameter": null,
+    "tileBasedJobOrdering": null
+  },
+  "startTime": null,
+  "endTime": null,
+  "created": "2025-02-06T14:51:15Z",
+  "lastUpdated": "2025-02-06T14:51:15Z",
+  "owner": {
+    "role": "ADMIN",
+    "name": "admin",
+    "id": 18,
+    "_links": {
+      "self": {
+        "href": "https://int.insula.earth/secure/api/v2.0/users/18{?projection}",
+        "templated": true
+      }
+    }
+  },
+  "subJobStatusCounts": {
+    "RUNNING": 1,
+    "COMPLETED": 2,
+    "ERROR": 1
+  },
+  "id": 4421,
+  "_links": {
+    "self": {
+      "href": "href",
+      "rel": "rel"
+    },
+    "parentJob": {
+      "href": "https://int.insula.earth/secure/api/v2.0/jobs/4421/parentJob{?projection}",
+      "templated": true
+    },
+    "subJobs": {
+      "href": "https://int.insula.earth/secure/api/v2.0/jobs/4421/subJobs{?projection}",
+      "templated": true
+    }
+  }
+}

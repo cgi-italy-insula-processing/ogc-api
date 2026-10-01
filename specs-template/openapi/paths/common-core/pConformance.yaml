@@ -1,0 +1,15 @@
+# Conformance
+get:
+  tags:
+    - Conformance
+  operationId: getConformance
+  summary: Retrieve the set of OGC API conformance classes that are supported by this service.
+  parameters:
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/unspecified/f-metadata.yaml"
+  responses:
+    '200':
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rConformance.yaml"
+    '406':
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotAcceptable.yaml"
+    '500':
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rServerError.yaml"

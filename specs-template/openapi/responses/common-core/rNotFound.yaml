@@ -1,0 +1,5 @@
+description: The requested resource does not exist on the server. For example, a path parameter had an incorrect value.
+content:
+   application/json:
+      schema:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/exception.yaml"

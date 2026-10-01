@@ -1,0 +1,56 @@
+{
+  "id" : 92,
+  "name" : "serviceByCwl",
+  "description" : "A Service created from a CWL.",
+  "type" : "PROCESSOR",
+  "dockerTag" : "eopaas/serviceByCwl",
+  "stripProxyPath" : true,
+  "licence" : "OPEN",
+  "status" : "IN_DEVELOPMENT",
+  "cwl": {
+    "url": "https://some.external.reference/cwl",
+    "document": "document"
+  },
+  "serviceDescriptor" : {
+    "id" : "serviceByCwl",
+    "title" : "titleOfTheServiceByCwl",
+    "description" : "A Service created from a CWL.",
+    "version" : "1.0",
+    "port" : null,
+    "groupId" : null,
+    "storeSupported" : false,
+    "statusSupported" : false,
+    "serviceType" : "",
+    "serviceProvider" : null,
+    "dataInputs" : [ ],
+    "dataOutputs" : [ ],
+    "metadata" : null
+  },
+  "serviceFilesUri" : null,
+  "additionalMounts" : { },
+  "dockerBuildInfo" : null,
+  "requiredResources" : null,
+  "externalServiceUri" : null,
+  "port" : "8080/tcp",
+  "groupId" : 0,
+  "dataSourceName" : "dataSourceName",
+  "_embedded" : {
+    "owner" : {
+      "role" : "ADMIN",
+      "name" : "valerio.trenta",
+      "id" : 9,
+      "_links" : {
+        "self" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "templated" : true
+        }
+      }
+    }
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/services/92",
+      "rel" : "self"
+    }
+  }
+}

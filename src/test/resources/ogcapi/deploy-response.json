@@ -1,0 +1,21 @@
+{
+  "title": "titleOfTheServiceByCwl",
+  "description": "A Service created from a CWL.",
+  "keywords": [],
+  "metadata": [],
+  "id": "serviceByCwl",
+  "version": "1.0",
+  "jobControlOptions": [
+    "async-execute",
+    "dismiss"
+  ],
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/processes/92",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "self"
+    }
+  ]
+}

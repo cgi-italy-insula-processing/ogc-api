@@ -1,0 +1,8 @@
+description: The processing output result of a job.
+content:
+  application/json:
+    schema:
+      type: object
+  application/geo+json:
+    schema:
+      type: object

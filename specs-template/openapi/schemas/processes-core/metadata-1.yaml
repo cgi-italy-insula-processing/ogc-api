@@ -1,0 +1,6 @@
+allOf:
+  - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/link.yaml"
+  - type: object
+    properties:
+      role:
+        type: string

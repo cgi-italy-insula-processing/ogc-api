@@ -1,0 +1,13 @@
+type: object
+required:
+  - processes
+  - links
+properties:
+  processes:
+    type: array
+    items:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processSummary.yaml"
+  links:
+    type: array
+    items:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/link.yaml"

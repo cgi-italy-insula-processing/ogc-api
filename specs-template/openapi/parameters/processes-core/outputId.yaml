@@ -1,0 +1,6 @@
+name: outputId
+in: path
+description: identifier of the output of a job
+required: true
+schema:
+  type: string

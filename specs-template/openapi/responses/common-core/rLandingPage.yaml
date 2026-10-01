@@ -1,0 +1,7 @@
+description: |-
+  The landing page provides links to the API definition (link relation `service-desc`, in this case path `/api`),
+  to the Conformance declaration (path `/conformance`, link relation `http://www.opengis.net/def/rel/ogc/1.0/conformance`), and to other resources.
+content:
+  application/json:
+    schema:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/landingPage.yaml"

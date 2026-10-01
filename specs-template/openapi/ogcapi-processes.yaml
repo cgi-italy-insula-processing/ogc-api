@@ -1,0 +1,192 @@
+openapi: 3.0.0
+info:
+   version: "0.1"
+   title: "OGC API - Processes"
+   description: |-
+      Example API Definition for OGC API - Processes
+   contact:
+      name: Open Geospatial Consortium
+      email: info@ogc.org
+   license:
+      name: OGC License
+      url: http://www.opengeospatial.org/legal/
+servers:
+   - description: |-
+        Example Server 1 (GNOSIS, supporting Part 1: Core /Sync and Part 3: Workflows)
+     url: https://maps.gnosis.earth/ogcapi
+paths:
+   # OGC API - Common - Part 1: Core
+   /:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/common-core/pLandingPage.yaml"
+   /conformance:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/common-core/pConformance.yaml"
+   /api:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/common-core/pAPI.yaml"
+
+   # OGC API - Processes - Part 1: Core
+   /processes:
+      # OGC API - Processes Part 2: Deploy, Replace, Undeploy
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-dru/pProcessListDeploy.yaml"
+
+   /processes/{processId}:
+      # OGC API - Processes Part 2: Deploy, Replace, Undeploy
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-dru/pProcessDescriptionReplaceUndeploy.yaml"
+
+   /processes/{processId}/package:
+      # OGC API - Processes Part 2: Deploy, Replace, Undeploy
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-dru/pPackage.yaml"
+
+   /processes/{processId}/execution:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-core/pExecution.yaml"
+
+   # OGC API - Processes - Part 1: Core (Jobs, required for ASync execution)
+   /jobs:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-core/pJobsList.yaml"
+
+   /jobs/{jobId}:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-core/pJob.yaml"
+
+   /jobs/{jobId}/results:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-core/pJobResults.yaml"
+
+   /jobs/{jobId}/results/{outputId}:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/paths/processes-core/pOutputResult.yaml"
+
+components:
+   schemas:
+
+      # Common - Core
+      confClasses:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/confClasses.yaml"
+      link:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/link.yaml"
+      landingPage:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/landingPage.yaml"
+      exception:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/exception.yaml"
+
+      # Processes - Core
+      processSummary:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processSummary.yaml"
+      process:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/process.yaml"
+      processList:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processList.yaml"
+      jobList:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/jobList.yaml"
+      bbox:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/bbox.yaml"
+      bbox-def-crs:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/bbox-def-crs.yaml"
+      descriptionType:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/descriptionType.yaml"
+      execute:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/execute.yaml"
+      inputDescription:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/inputDescription.yaml"
+      input:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/input.yaml"
+      inputValue:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/inputValue.yaml"
+      inputValueNoObject:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/inputValueNoObject.yaml"
+      jobControlOptions:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/jobControlOptions.yaml"
+      metadata:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/metadata.yaml"
+      outputDescription:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/outputDescription.yaml"
+      reference:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/reference.yaml"
+      results:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/results.yaml"
+      processesCoreSchema:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processesCoreSchema.yaml"
+      statusCode:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/statusCode.yaml"
+      inlineOrRefData:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/inlineOrRefData.yaml"
+      statusInfo:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/statusInfo.yaml"
+
+      # OGC API - Common - Part 2: Deploy, Replace, Undeploy
+      ogcapppkg:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-dru/ogcapppkg.yaml"
+
+   parameters:
+      # Common - Core
+      f-metadata:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/unspecified/f-metadata.yaml"
+
+      # Common - Geospatial data
+      datetime:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/common-geodata/datetime.yaml"
+
+      # Processes - Core
+      processId-path:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/processId-path.yaml"
+
+      # Processes - Core (Jobs)
+      jobId:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/jobId.yaml"
+
+      # Processes - Core (Querying Jobs)
+      processId-query:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/processId-query.yaml"
+      limit:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/limit.yaml"
+      type:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/type.yaml"
+      status:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/status.yaml"
+      minDuration:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/minDuration.yaml"
+      maxDuration:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/maxDuration.yaml"
+
+   responses:
+      # Generic Errors
+      NotFound:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotFound.yaml"
+      NotAcceptable:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotAcceptable.yaml"
+      ServerError:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rServerError.yaml"
+      NotAllowed:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotAllowed.yaml"
+      Exception:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rException.yaml"
+
+      # Common - Core
+      LandingPage:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rLandingPage.yaml"
+      Conformance:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rConformance.yaml"
+      API:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rAPI.yaml"
+
+      # Processes - Core
+      ProcessList:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rProcessList.yaml"
+      ProcessDescription:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rProcessDescription.yaml"
+      Results:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rResults.yaml"
+      Status:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rStatus.yaml"
+      JobList:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rJobList.yaml"
+      ExecuteAsync:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rExecuteAsync.yaml"
+      ProcessSummary:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rProcessSummary.yaml"
+      EmptyResponse:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rEmpty.yaml"
+
+      # OGC API - Common - Part 2: Deploy, Replace, Undeploy
+
+      # Part 2 additional exceptions
+      DuplicateProcess:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-dru/rDuplicateProcess.yaml"
+      ImmutableProcess:
+         $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-dru/rImmutableProcess.yaml"

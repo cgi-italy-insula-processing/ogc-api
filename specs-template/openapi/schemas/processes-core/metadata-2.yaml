@@ -1,0 +1,10 @@
+type: object
+properties:
+  role:
+    type: string
+  title:
+    type: string
+  lang:
+    type: string
+  value:
+    type: object

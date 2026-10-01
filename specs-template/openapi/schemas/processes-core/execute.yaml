@@ -1,0 +1,8 @@
+type: object
+properties:
+  processID:
+    type: string
+    format: uri
+  inputs:
+    additionalProperties:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/input.yaml"

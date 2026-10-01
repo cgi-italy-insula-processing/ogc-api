@@ -1,0 +1,3 @@
+oneOf:
+  - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/metadata-1.yaml"
+  - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/metadata-2.yaml"

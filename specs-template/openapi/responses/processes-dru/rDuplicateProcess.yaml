@@ -1,0 +1,5 @@
+description: the processes being added is already deployed (i.e. duplicate)
+content:
+  application/json:
+    schema:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/exception.yaml"

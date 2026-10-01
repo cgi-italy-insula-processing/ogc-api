@@ -1,0 +1,16 @@
+{
+  "outputTwo": {
+    "href": "http://localhost/testogcapi/jobs/4421/results/outputTwo",
+    "rel": "output",
+    "type": null,
+    "hreflang": null,
+    "title": "outputTwo"
+  },
+  "outputOne": {
+    "href": "http://localhost/testogcapi/jobs/4421/results/outputOne",
+    "rel": "output",
+    "type": null,
+    "hreflang": null,
+    "title": "outputOne"
+  }
+}

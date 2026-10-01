@@ -1,0 +1,10 @@
+{
+  "processDescription": null,
+  "executionUnit": {
+    "href": "https://raw.githubusercontent.com/MAAP-Project/sardem-sarsen/refs/heads/esa-ogc/nasa/ogc/workflows/process_sardem-sarsen_mlucas_nasa_ogc.cwl",
+    "rel": "reference",
+    "type": "application/cwl",
+    "hreflang": null,
+    "title": "Process Reference"
+  }
+}

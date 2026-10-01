@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "title": "serviceName",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4322",
+      "processID": "http://localhost/testogcapi/processes/70",
+      "type": null,
+      "request": null,
+      "status": "successful",
+      "message": null,
+      "exception": null,
+      "created": "2025-03-09T11:58:44.136Z",
+      "started": "2025-03-10T11:58:44.136Z",
+      "finished": "2025-03-10T11:59:58.973Z",
+      "updated": "2025-03-10T11:58:44.138Z",
+      "progress": 100,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4322",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/jobs?limit=1&offset=0{&processID,status,minDuration,maxDuration,type,datetime}",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Get Jobs"
+    },
+    {
+      "href": "http://localhost/testogcapi/jobs?limit=1&offset=1{&processID,status,minDuration,maxDuration,type,datetime}",
+      "rel": "next",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Next page"
+    }
+  ]
+}

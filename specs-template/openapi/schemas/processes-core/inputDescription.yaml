@@ -1,0 +1,31 @@
+allOf:
+- $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/descriptionType.yaml"
+- type: object
+  required:
+    - schema
+  properties:
+    schema:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/processesCoreSchema.yaml"
+    dataClasses:
+      type: array
+      items:
+        type: string
+        format: uri
+    minOccurs:
+      type: integer
+      default: 1
+    maxOccurs:
+      oneOf:
+        - type: integer
+          default: 1
+        - type: string
+          enum:
+            - "unbounded"
+    valuePassing:
+      type: array
+      items:
+        type: string
+        enum:
+          - "byValue"
+          - "byReference"
+      default: ["byValue","byReference"]

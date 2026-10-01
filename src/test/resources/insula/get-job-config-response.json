@@ -1,0 +1,19 @@
+{
+  "id": 4421,
+  "inputs": {
+    "bbox": ["24.54 65.36 25.05 56.27"],
+    "collection": ["{\"outputs_result\":\"eopaas988261690d7a4a20ae6eb338865d41cd\"}"]
+  },
+  "_embedded": {
+    "service": {
+      "id": 349,
+      "name": "cwl-parallel-demo-006-erfan-20260121",
+      "dockerTag": "eopaas/sardem-sarsen-process:8f50d01c"
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "https://int.insula.earth/secure/api/v2.0/jobConfigs/4421"
+    }
+  }
+}

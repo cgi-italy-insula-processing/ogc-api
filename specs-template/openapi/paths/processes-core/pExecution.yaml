@@ -1,0 +1,28 @@
+post:
+  summary: execute a process.
+  description: |
+    Executes a process (this may result in the creation of a job resource e.g., for _asynchronous execution_).
+    
+    For more information, see [Section 7.9](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_create_job).
+  operationId: execute
+  tags:
+    - Processes
+  parameters:
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/processId-path.yaml"
+  requestBody:
+    description: |-
+      An execution request specifying any inputs for the process to execute, and optionally to select specific outputs.
+      With support for _Part 3: Workflows and chaining_, this execution request may specify a complex processing workflow
+      e.g., including nested processes and OGC API collections as inputs.
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/execute.yaml"
+  responses:
+    201:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rExecuteAsync.yaml"
+    404:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotFound.yaml"
+    500:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rServerError.yaml"

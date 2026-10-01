@@ -1,0 +1,9 @@
+[
+  {
+    "href": "http://localhost/secure/api/v2.0/platformFiles/4864{?projection}/dl",
+    "rel": "download",
+    "type": null,
+    "hreflang": null,
+    "title": "Download c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputOne/SampleGeotiff-1.tif"
+  }
+]

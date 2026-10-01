@@ -1,0 +1,155 @@
+{
+  "jobs": [
+    {
+      "title": "proces-sarsen-test-final",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4543",
+      "processID": "http://localhost/testogcapi/processes/82",
+      "type": null,
+      "request": null,
+      "status": "accepted",
+      "message": null,
+      "exception": null,
+      "created": "2025-04-16T14:07:32.289Z",
+      "started": "2025-04-16T14:07:34.595Z",
+      "finished": "2025-04-16T14:11:56.199Z",
+      "updated": "2025-04-16T14:11:56.203Z",
+      "progress": 75,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4543",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    },
+    {
+      "title": "proces-sarsen-test-final",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4544",
+      "processID": "http://localhost/testogcapi/processes/82",
+      "type": null,
+      "request": null,
+      "status": "accepted",
+      "message": null,
+      "exception": null,
+      "created": "2025-04-16T14:49:55.337Z",
+      "started": "2025-04-16T14:49:56.004Z",
+      "finished": "2025-04-16T15:04:15.459Z",
+      "updated": "2025-04-16T15:04:15.47Z",
+      "progress": 75,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4544",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    },
+    {
+      "title": "proces-sarsen-test-final",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4572",
+      "processID": "http://localhost/testogcapi/processes/82",
+      "type": null,
+      "request": null,
+      "status": "accepted",
+      "message": null,
+      "exception": null,
+      "created": "2025-04-18T14:13:35.184Z",
+      "started": "2025-04-18T14:13:37.139Z",
+      "finished": "2025-04-18T14:17:54.514Z",
+      "updated": "2025-04-18T14:17:56.376Z",
+      "progress": 100,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4572",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    },
+    {
+      "title": "sardem-sarsen-test-final",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4571",
+      "processID": "http://localhost/testogcapi/processes/70",
+      "type": null,
+      "request": null,
+      "status": "accepted",
+      "message": null,
+      "exception": null,
+      "created": "2025-04-18T14:07:31.759Z",
+      "started": "2025-04-18T14:07:36.46Z",
+      "finished": "2025-04-18T14:11:47.869Z",
+      "updated": "2025-04-18T14:11:51.722Z",
+      "progress": 100,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4571",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    },
+    {
+      "title": "sardem-sarsen-test",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "4540",
+      "processID": "http://localhost/testogcapi/processes/34",
+      "type": null,
+      "request": null,
+      "status": "accepted",
+      "message": null,
+      "exception": null,
+      "created": "2025-04-16T07:01:09.973Z",
+      "started": "2025-04-16T07:01:11.557Z",
+      "finished": "2025-04-16T07:06:10.886Z",
+      "updated": "2025-04-16T07:06:10.889Z",
+      "progress": 75,
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/jobs/4540",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "Job Status"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/jobs?limit=5&offset=2&processID=process&status=ACCEPTED&datetime=2025-03-12T14%3A56%3A09{&minDuration,maxDuration,type}",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Get Jobs"
+    },
+    {
+      "href": "http://localhost/testogcapi/jobs?limit=5&offset=7&processID=process&status=ACCEPTED&datetime=2025-03-12T14%3A56%3A09{&minDuration,maxDuration,type}",
+      "rel": "next",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "Next page"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "features": [
+    {
+      "properties": {
+        "insula:serviceName": "sardem-sarsen-test-final",
+        "proj:centroid": {
+          "type": "Point",
+          "coordinates": [
+            11.795628,
+            42.813764889
+          ]
+        },
+        "title": "S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+        "platform": "S1A",
+        "insula:platformFileType": "OUTPUT_PRODUCT",
+        "datetime": "2025-03-30T17:14:21.899737Z/2025-03-30T17:14:46.898759Z",
+        "eo:snow_cover": 0,
+        "instruments": [
+          "SAR"
+        ],
+        "insula:productIdentifier": "9ba53662-ec8e-46a0-b440-12cb8d506846_outputs_result/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+        "insula:jobStartDate": "2025-04-18T17:11:50.952Z",
+        "eo:cloud_cover": 0,
+        "insula:filename": "S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+        "insula:platformparam": "{\"type\": \"STAC\", \"format\": \"CATALOGUE\", \"outputId\": \"outputs_result\", \"preventUrlDownload\": \"false\"}",
+        "insula:jobId": "9ba53662-ec8e-46a0-b440-12cb8d506846",
+        "insula:catalogueSpecificProperties": {
+          "extraParams": {
+            "platformUpdated": "2025-04-18T17:15:31.461476Z"
+          },
+          "updated": "2025-04-18T17:15:31.461476Z"
+        },
+        "processing:level": "LEVEL1",
+        "created": "2025-04-18T17:15:31.461476Z",
+        "insula:intJobId": 4584,
+        "insula:jobOwner": "valerio.trenta",
+        "insula:jobEndDate": "2025-04-18T17:15:28.114Z",
+        "license": "unlicensed",
+        "sar:instrument_mode": "IW",
+        "raster:spatial_resolution": 0,
+        "sat:absolute_orbit": 58537,
+        "file:size": 7318333,
+        "insula:collection": "eopaas23d15d17d5954239951a927de8a936c5"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.539378,
+              42.360153778
+            ],
+            [
+              12.051878,
+              42.360153778
+            ],
+            [
+              12.051878,
+              43.267376
+            ],
+            [
+              11.539378,
+              43.267376
+            ],
+            [
+              11.539378,
+              42.360153778
+            ]
+          ]
+        ]
+      },
+      "id": "597094e4-eaf5-5c57-8f5a-cfd61048a3c3",
+      "assets": {
+        "internal": {
+          "href": "eopaas://outputProduct/9ba53662-ec8e-46a0-b440-12cb8d506846/outputs_result/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+          "title": "S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+          "type": "application/octet-stream",
+          "roles": [
+            "data"
+          ],
+          "description": "Downloadable for asset 597094e4-eaf5-5c57-8f5a-cfd61048a3c3",
+          "file:size": 7318333
+        }
+      },
+      "type": "Feature",
+      "links": [
+        {
+          "title": "platformFile",
+          "rel": "platformFile",
+          "href": "https://int.insula.earth/secure/api/v2.0/search/products/platform/5395"
+        },
+        {
+          "title": "download",
+          "rel": "download",
+          "href": "https://int.insula.earth/secure/api/v2.0/search/dl/platform/5395"
+        },
+        {
+          "title": "platform",
+          "rel": "platform",
+          "href": "eopaas://outputProduct/9ba53662-ec8e-46a0-b440-12cb8d506846/outputs_result/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif"
+        }
+      ],
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+        "https://stac-extensions.github.io/sar/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/eo/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+        "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+        "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+        "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+        "https://cgi-italy.github.io/insula/schemas/v1.2.0/stac/insula-stac-extension.schema.json"
+      ]
+    }
+  ],
+  "numberReturned": 1,
+  "type": "FeatureCollection",
+  "numberMatched": 1,
+  "links": [
+    {
+      "rel": "last",
+      "href": "href"
+    },
+    {
+      "rel": "first",
+      "href": "href"
+    }
+  ]
+}

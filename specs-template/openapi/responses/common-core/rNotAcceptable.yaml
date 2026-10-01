@@ -1,0 +1,5 @@
+description: Content negotiation failed. For example, the `Accept` header submitted in the request did not support any of the media types supported by the server for the requested resource.
+content:
+  application/json:
+    schema:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/common-core/exception.yaml"

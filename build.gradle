@@ -1,0 +1,177 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.3'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'org.openapi.generator' version '7.11.0'
+    id 'com.bmuschko.docker-remote-api' version '9.4.0'
+}
+
+group = 'com.cgi.eoss.ogc'
+version '1.0.3-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+        flatDir {
+            dirs "$rootDir/core/cwl-model"
+        }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'com.cgi.eoss.cwl_v1_2:cwl_v1_2:0.0.1'
+    // SpringDoc dependencies
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+
+    // @Nullable annotation
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'org.openapitools:jackson-databind-nullable:0.2.6'
+    
+    // Bean Validation API support
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    // Guava support
+    implementation 'com.google.guava:guava:33.2.1-jre'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava'
+    
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        java.srcDirs += "$buildDir/generated/src/main/java"
+    }
+}
+
+openApiValidate {
+    inputSpec.set("$rootDir/specs/openapi/ogcapi-processes.yaml")
+}
+
+openApiGenerate {
+    generatorName.set('spring')
+    inputSpec.set("$rootDir/specs/openapi/ogcapi-processes.yaml")
+    outputDir.set("$buildDir/generated")
+    ignoreFileOverride.set("$rootDir/.openapi-generator-ignore")
+
+    apiPackage.set('com.cgi.eoss.ogcapi.processes.controllers')
+    modelPackage.set('com.cgi.eoss.ogcapi.processes.model')
+
+    configOptions.put('configPackage', 'com.cgi.eoss.ogcapi.processes.config')
+    configOptions.put('basePackage', 'com.cgi.eoss.ogcapi.processes')
+
+    configOptions.put('useSpringBoot3', 'true')
+    configOptions.put('annotationLibrary', 'swagger2')
+    configOptions.put('apiFirst', 'false')
+    configOptions.put('dateLibrary', 'java8')
+    configOptions.put('delegatePattern', 'true')
+    configOptions.put('skipDefaultInterface', 'false')
+    configOptions.put('useJakartaEe', 'true')
+    configOptions.put('useOneOfInterfaces', 'true')
+    configOptions.put('useTags', 'false')
+    configOptions.put('useOptional', 'false')
+    configOptions.put('hideGenerationTimestamp', 'true')
+    configOptions.put('documentationProvider', 'springdoc')
+
+    openapiNormalizer.put("SIMPLIFY_ONEOF_ANYOF", "false")
+}
+
+bootJar {
+    setArchiveClassifier('bin')
+    launchScript()
+}
+
+jar {
+    archiveBaseName = 'ogc-api-processes'
+}
+
+import com.bmuschko.gradle.docker.tasks.image.*
+
+tasks.register('buildDockerImage', DockerBuildImage) {
+    dependsOn bootJar
+    def base_image = project.getProperties().get("container.docker.baseImage") as String
+    inputDir = file('.')
+
+    if (project.hasProperty("DOCKER_REGISTRY_URL")) {
+        images.add(project.getProperties().get("DOCKER_REGISTRY_URL") + "/" + "${project.group}/${jar.archiveBaseName.get()}:${project.version}")
+        images.add(project.getProperties().get("DOCKER_REGISTRY_URL") + "/" + "${project.group}/${jar.archiveBaseName.get()}:latest")
+        cacheFrom.add(project.getProperties().get("DOCKER_REGISTRY_URL") + "/" + "${project.group}/${jar.archiveBaseName.get()}:latest")
+    }
+    else{
+        images.add("${project.group}/${jar.archiveBaseName.get()}:${project.version}")
+        images.add("${project.group}/${jar.archiveBaseName.get()}:latest")
+        cacheFrom.add("${project.group}/${jar.archiveBaseName.get()}:latest")
+    }
+
+    buildArgs = ['JAR_FILE': "build/libs/${jar.archiveBaseName.get()}-${project.version}-bin.jar",
+                 'BASE_IMAGE': base_image]
+}
+
+tasks.register('pushLatestDockerImage', DockerPushImage) {
+    images = [project.getProperties().get("DOCKER_REGISTRY_URL") + "/" + "${project.group}/${jar.archiveBaseName.get()}:latest"]
+}
+
+tasks.register('pushCurrentVersionDockerImage', DockerPushImage) {
+    images = [project.getProperties().get("DOCKER_REGISTRY_URL") + "/" + "${project.group}/${jar.archiveBaseName.get()}:${project.version}"]
+}
+
+tasks.register('pushDockerImage') {
+    dependsOn pushLatestDockerImage, pushCurrentVersionDockerImage
+}
+
+tasks.register('openApiSpecGenerate') {
+    doLast {
+
+        def sourceFolder = file('specs-template')
+        if (!sourceFolder.exists() || !sourceFolder.isDirectory()) {
+            println "Specs template folder not found: $sourceFolder"
+            return
+        }
+
+        def destinationFolder = file('specs')
+        delete destinationFolder
+
+        copy {
+            from sourceFolder
+            into destinationFolder
+        }
+
+        def placeholder = '_OGC_API_PROCESSES_SPECS_ROOT_/'
+        def placeholderReplacement =  file("${projectDir}").path.toString() + "/specs/openapi/"
+        destinationFolder.eachFileRecurse { file ->
+            if (file.isFile()) {
+                file.write( file.text.replace(placeholder, placeholderReplacement) )
+            }
+        }
+    }
+}
+
+tasks.openApiValidate.dependsOn tasks.openApiSpecGenerate
+tasks.openApiGenerate.dependsOn tasks.openApiValidate
+tasks.compileJava.dependsOn tasks.openApiGenerate
+

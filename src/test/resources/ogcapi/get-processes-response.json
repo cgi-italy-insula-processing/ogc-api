@@ -1,0 +1,55 @@
+{
+  "processes": [
+    {
+      "title": "service-title-1",
+      "description": null,
+      "keywords": [],
+      "metadata": [],
+      "id": "service-name-1",
+      "version": "N/A",
+      "jobControlOptions": [
+        "async-execute",
+        "dismiss"
+      ],
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/processes/70",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "OGC Process Description"
+        }
+      ]
+    },
+    {
+      "title": "service-title-2",
+      "description": "",
+      "keywords": [],
+      "metadata": [],
+      "id": "service-name-2",
+      "version": "0.1",
+      "jobControlOptions": [
+        "async-execute",
+        "dismiss"
+      ],
+      "links": [
+        {
+          "href": "http://localhost/testogcapi/processes/7",
+          "rel": "self",
+          "type": "application/json",
+          "hreflang": null,
+          "title": "OGC Process Description"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "http://localhost/testogcapi/processes?limit=2",
+      "rel": "self",
+      "type": "application/json",
+      "hreflang": null,
+      "title": "self"
+    }
+  ]
+}

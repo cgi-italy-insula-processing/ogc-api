@@ -1,0 +1,98 @@
+{
+  "_embedded" : {
+    "jobs" : [
+      {
+      "outputs" : {
+        "out" : [ "eopaas://outputProduct/c7d6fedd-5e2d-4a31-b359-95c69e16ca92/out/SampleGeotiff-1.tif" ]
+      },
+      "serviceName" : "serviceName",
+      "serviceId": 70,
+      "parent" : false,
+      "guiUrl" : null,
+      "stage" : "Step 3 of 3: Output-List",
+      "queuePosition" : -1,
+      "phase" : "OUTPUT_LIST",
+      "access" : {
+        "published" : false,
+        "publishRequested" : false,
+        "currentLevel" : "SUPERUSER"
+      },
+      "outputFiles" : [ {
+        "access" : {
+          "published" : false,
+          "publishRequested" : false,
+          "currentLevel" : "SUPERUSER"
+        },
+        "restoId" : "9d517a36-02ff-5c0f-b737-db28fe0a9fa6",
+        "filename" : "c7d6fedd-5e2d-4a31-b359-95c69e16ca92/out/SampleGeotiff-1.tif",
+        "type" : "OUTPUT_PRODUCT",
+        "owner" : {
+          "role" : "ADMIN",
+          "name" : "valerio.trenta",
+          "id" : 9,
+          "_links" : {
+            "self" : {
+              "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated" : true
+            }
+          }
+        },
+        "id" : 4865,
+        "_links" : {
+          "download" : {
+            "href" : "https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl",
+            "rel": "self",
+            "templated" : true
+          }
+        }
+      } ],
+      "extId" : "c7d6fedd-5e2d-4a31-b359-95c69e16ca92",
+      "status" : "COMPLETED",
+      "config" : {
+        "id" : 3093,
+        "inputs" : {
+          "in" : [ "eopaas://refData/11/SampleGeotiff-1.tif" ],
+          "collection" : [ "{\"out\":\"eopaas23d15d17d5954239951a927de8a936c5\"}" ]
+        },
+        "label" : null,
+        "systematicParameter" : null,
+        "tileBasedJobOrdering" : null
+      },
+      "startTime" : "2025-03-10T11:58:44.136",
+      "endTime" : "2025-03-10T11:59:58.973",
+      "created" : "2025-03-09T11:58:44.136Z",
+      "lastUpdated" : "2025-03-10T11:58:44.138Z",
+      "owner" : {
+        "role" : "ADMIN",
+        "name" : "valerio.trenta",
+        "id" : 9,
+        "_links" : {
+          "self" : {
+            "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+            "templated" : true
+          }
+        }
+      },
+      "id" : 4322,
+      "_links" : {
+        "self" : {
+          "href" : "href",
+          "rel" : "rel"
+        }
+      }
+    }
+    ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "href",
+      "rel" : "rel"
+    }
+  },
+  "page" : {
+    "size" : 1,
+    "totalElements" : 115,
+    "totalPages" : 115,
+    "number" : 0
+  }
+}

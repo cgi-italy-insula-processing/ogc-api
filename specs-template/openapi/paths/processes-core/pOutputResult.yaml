@@ -1,0 +1,19 @@
+get:
+  summary: retrieve the result of a job
+  description: |
+    Shows a single output of a job. In case of a failure, shows exceptions instead.
+    
+    For more information, see [Section 7.11](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_retrieve_job_results).
+  operationId: getOutputResult
+  tags:
+    - Jobs
+  parameters:
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/jobId.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/outputId.yaml"
+  responses:
+    200:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rOutputResult.yaml"
+    404:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotFound.yaml"
+    500:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rServerError.yaml"

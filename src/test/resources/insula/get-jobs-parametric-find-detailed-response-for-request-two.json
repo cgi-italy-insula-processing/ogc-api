@@ -1,0 +1,585 @@
+{
+  "_embedded": {
+    "jobs": [
+      {
+        "stage": "Step 3 of 3: Output-List",
+        "queuePosition": -1,
+        "outputFiles": [
+          {
+            "restoId": "5b72c5e4-8c03-5589-a2e3-fcb86dcf8af4",
+            "access": {
+              "published": false,
+              "publishRequested": false,
+              "currentLevel": "SUPERUSER"
+            },
+            "filename": "da793a2f-eff5-47f7-bcb2-774627722ecb/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+            "type": "OUTPUT_PRODUCT",
+            "owner": {
+              "role": "ADMIN",
+              "name": "valerio.trenta",
+              "id": 9,
+              "_links": {
+                "self": {
+                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "templated": true
+                }
+              }
+            },
+            "id": 5389,
+            "_links": {
+              "jobs": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/jobs{?projection}",
+                "templated": true
+              },
+              "collection": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/collection{?projection}",
+                "templated": true
+              },
+              "owner": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/owner{?projection}",
+                "templated": true
+              },
+              "self": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389{?projection}",
+                "templated": true
+              },
+              "download": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389{?projection}/dl",
+                "templated": true
+              }
+            }
+          }
+        ],
+        "parent": false,
+        "lastUpdated": "2025-04-18T14:11:51.722Z",
+        "extId": "da793a2f-eff5-47f7-bcb2-774627722ecb",
+        "serviceName": "sardem-sarsen-test-final",
+        "serviceId": 70,
+        "outputs": {
+          "outputs_result": [
+            "eopaas://outputProduct/da793a2f-eff5-47f7-bcb2-774627722ecb/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif"
+          ]
+        },
+        "created": "2025-04-18T14:07:31.759Z",
+        "endTime": "2025-04-18T14:11:47.869",
+        "access": {
+          "published": false,
+          "publishRequested": false,
+          "currentLevel": "SUPERUSER"
+        },
+        "phase": "OUTPUT_LIST",
+        "status": "CREATED",
+        "config": {
+          "id": 3395,
+          "inputs": {
+            "stac_asset_name": [
+              "internal"
+            ],
+            "stac_catalog_folder": [
+              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+            ],
+            "bbox": [
+              "11.539378 42.36005 12.051999 43.267376"
+            ],
+            "collection": [
+              "{\"outputs_result\":\"eopaas23d15d17d5954239951a927de8a936c5\"}"
+            ]
+          }
+        },
+        "startTime": "2025-04-18T14:07:36.46",
+        "owner": {
+          "role": "ADMIN",
+          "name": "valerio.trenta",
+          "id": 9,
+          "_links": {
+            "self": {
+              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated": true
+            }
+          }
+        },
+        "id": 4571,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571"
+          },
+          "job": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571{?projection}",
+            "templated": true
+          },
+          "logs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/logs"
+          },
+          "output-outputs_result": {
+            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389"
+          },
+          "outputFiles": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/outputFiles{?projection}",
+            "templated": true
+          },
+          "subJobs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/subJobs{?projection}",
+            "templated": true
+          },
+          "jobProcessings": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/jobProcessings"
+          },
+          "config": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/config"
+          },
+          "owner": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/owner{?projection}",
+            "templated": true
+          },
+          "parentJob": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/parentJob{?projection}",
+            "templated": true
+          }
+        }
+      },
+      {
+        "stage": "Step 2 of 3: Processing",
+        "queuePosition": -1,
+        "outputFiles": [],
+        "parent": false,
+        "lastUpdated": "2025-04-16T07:06:10.889Z",
+        "extId": "52f51c46-e2cd-4f73-a182-fd9d81f41ff6",
+        "serviceName": "sardem-sarsen-test",
+        "serviceId": 34,
+        "created": "2025-04-16T07:01:09.973Z",
+        "endTime": "2025-04-16T07:06:10.886",
+        "access": {
+          "published": false,
+          "publishRequested": false,
+          "currentLevel": "SUPERUSER"
+        },
+        "phase": "PROCESSING",
+        "status": "CREATED",
+        "config": {
+          "id": 3388,
+          "inputs": {
+            "stac_asset_name": [
+              "enclosure"
+            ],
+            "stac_catalog_folder": [
+              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+            ],
+            "bbox": [
+              "11.539378 42.36005 12.051999 43.267376"
+            ],
+            "collection": [
+              "{\"outputs_result\":\"eopaas23d15d17d5954239951a927de8a936c5\"}"
+            ]
+          }
+        },
+        "startTime": "2025-04-16T07:01:11.557",
+        "owner": {
+          "role": "ADMIN",
+          "name": "valerio.trenta",
+          "id": 9,
+          "_links": {
+            "self": {
+              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated": true
+            }
+          }
+        },
+        "id": 4540,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540"
+          },
+          "job": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540{?projection}",
+            "templated": true
+          },
+          "logs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/logs"
+          },
+          "outputFiles": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/outputFiles{?projection}",
+            "templated": true
+          },
+          "subJobs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/subJobs{?projection}",
+            "templated": true
+          },
+          "jobProcessings": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/jobProcessings"
+          },
+          "config": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/config"
+          },
+          "owner": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/owner{?projection}",
+            "templated": true
+          },
+          "parentJob": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/parentJob{?projection}",
+            "templated": true
+          }
+        }
+      },
+      {
+        "stage": "Step 3 of 3: Output-List",
+        "queuePosition": -1,
+        "outputFiles": [
+          {
+            "restoId": "e1f6e527-3f89-5848-aba6-4761a76ea277",
+            "access": {
+              "published": false,
+              "publishRequested": false,
+              "currentLevel": "SUPERUSER"
+            },
+            "filename": "1064b513-4170-424e-8756-fe7309b62782/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+            "type": "OUTPUT_PRODUCT",
+            "owner": {
+              "role": "ADMIN",
+              "name": "valerio.trenta",
+              "id": 9,
+              "_links": {
+                "self": {
+                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "templated": true
+                }
+              }
+            },
+            "id": 5387,
+            "_links": {
+              "jobs": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/jobs{?projection}",
+                "templated": true
+              },
+              "collection": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/collection{?projection}",
+                "templated": true
+              },
+              "owner": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/owner{?projection}",
+                "templated": true
+              },
+              "self": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387{?projection}",
+                "templated": true
+              },
+              "download": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387{?projection}/dl",
+                "templated": true
+              }
+            }
+          }
+        ],
+        "parent": false,
+        "lastUpdated": "2025-04-16T20:57:29.389Z",
+        "extId": "1064b513-4170-424e-8756-fe7309b62782",
+        "serviceName": "sardem-sarsen-test-final",
+        "serviceId": 70,
+        "outputs": {
+          "outputs_result": [
+            "eopaas://outputProduct/1064b513-4170-424e-8756-fe7309b62782/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif"
+          ]
+        },
+        "created": "2025-04-16T20:53:41.993Z",
+        "endTime": "2025-04-16T20:57:25.416",
+        "access": {
+          "published": false,
+          "publishRequested": false,
+          "currentLevel": "SUPERUSER"
+        },
+        "phase": "OUTPUT_LIST",
+        "status": "CREATED",
+        "config": {
+          "id": 3395,
+          "inputs": {
+            "stac_asset_name": [
+              "internal"
+            ],
+            "stac_catalog_folder": [
+              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+            ],
+            "bbox": [
+              "11.539378 42.36005 12.051999 43.267376"
+            ],
+            "collection": [
+              "{\"outputs_result\":\"eopaas23d15d17d5954239951a927de8a936c5\"}"
+            ]
+          }
+        },
+        "startTime": "2025-04-16T20:53:47.134",
+        "owner": {
+          "role": "ADMIN",
+          "name": "valerio.trenta",
+          "id": 9,
+          "_links": {
+            "self": {
+              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated": true
+            }
+          }
+        },
+        "id": 4556,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556"
+          },
+          "job": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556{?projection}",
+            "templated": true
+          },
+          "logs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/logs"
+          },
+          "output-outputs_result": {
+            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387"
+          },
+          "outputFiles": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/outputFiles{?projection}",
+            "templated": true
+          },
+          "subJobs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/subJobs{?projection}",
+            "templated": true
+          },
+          "jobProcessings": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/jobProcessings"
+          },
+          "config": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/config"
+          },
+          "owner": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/owner{?projection}",
+            "templated": true
+          },
+          "parentJob": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/parentJob{?projection}",
+            "templated": true
+          }
+        }
+      },
+      {
+        "stage": "Step 3 of 3: Output-List",
+        "queuePosition": -1,
+        "outputFiles": [
+          {
+            "restoId": "01a25186-cf2c-520d-b42c-ea6d04fa767d",
+            "access": {
+              "published": false,
+              "publishRequested": false,
+              "currentLevel": "SUPERUSER"
+            },
+            "filename": "8f4d689e-0249-4102-b1e7-6f364f66f821/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif",
+            "type": "OUTPUT_PRODUCT",
+            "owner": {
+              "role": "ADMIN",
+              "name": "valerio.trenta",
+              "id": 9,
+              "_links": {
+                "self": {
+                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "templated": true
+                }
+              }
+            },
+            "id": 5388,
+            "_links": {
+              "jobs": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/jobs{?projection}",
+                "templated": true
+              },
+              "collection": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/collection{?projection}",
+                "templated": true
+              },
+              "owner": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/owner{?projection}",
+                "templated": true
+              },
+              "self": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388{?projection}",
+                "templated": true
+              },
+              "download": {
+                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388{?projection}/dl",
+                "templated": true
+              }
+            }
+          }
+        ],
+        "parent": false,
+        "extId": "8f4d689e-0249-4102-b1e7-6f364f66f821",
+        "serviceName": "sardem-sarsen-test-final",
+        "serviceId": 70,
+        "outputs": {
+          "outputs_result": [
+            "eopaas://outputProduct/8f4d689e-0249-4102-b1e7-6f364f66f821/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B_sarsen_output.tif"
+          ]
+        },
+        "created": "2025-04-17T10:28:35.57Z",
+        "endTime": "2025-04-17T10:32:45.682",
+        "access": {
+          "published": false,
+          "publishRequested": false,
+          "currentLevel": "SUPERUSER"
+        },
+        "phase": "OUTPUT_LIST",
+        "status": "CREATED",
+        "config": {
+          "id": 3395,
+          "inputs": {
+            "stac_asset_name": [
+              "internal"
+            ],
+            "stac_catalog_folder": [
+              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+            ],
+            "bbox": [
+              "11.539378 42.36005 12.051999 43.267376"
+            ],
+            "collection": [
+              "{\"outputs_result\":\"eopaas23d15d17d5954239951a927de8a936c5\"}"
+            ]
+          }
+        },
+        "startTime": "2025-04-17T10:28:40.247",
+        "owner": {
+          "role": "ADMIN",
+          "name": "valerio.trenta",
+          "id": 9,
+          "_links": {
+            "self": {
+              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated": true
+            }
+          }
+        },
+        "id": 4562,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562"
+          },
+          "job": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562{?projection}",
+            "templated": true
+          },
+          "logs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/logs"
+          },
+          "output-outputs_result": {
+            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388"
+          },
+          "outputFiles": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/outputFiles{?projection}",
+            "templated": true
+          },
+          "subJobs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/subJobs{?projection}",
+            "templated": true
+          },
+          "jobProcessings": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/jobProcessings"
+          },
+          "config": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/config"
+          },
+          "owner": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/owner{?projection}",
+            "templated": true
+          },
+          "parentJob": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/parentJob{?projection}",
+            "templated": true
+          }
+        }
+      },
+      {
+        "stage": "Step 2 of 3: Processing",
+        "queuePosition": -1,
+        "outputFiles": [],
+        "parent": false,
+        "lastUpdated": "2025-04-16T13:50:45.789Z",
+        "extId": "a9be7fb8-e56b-4416-b054-5551507aad96",
+        "serviceName": "sardem-sarsen-test",
+        "serviceId": 34,
+        "created": "2025-04-16T13:45:50.965Z",
+        "endTime": "2025-04-16T13:50:45.783",
+        "access": {
+          "published": false,
+          "publishRequested": false,
+          "currentLevel": "SUPERUSER"
+        },
+        "phase": "PROCESSING",
+        "status": "CREATED",
+        "config": {
+          "id": 3393,
+          "inputs": {
+            "stac_asset_name": [
+              "internal"
+            ],
+            "stac_catalog_folder": [
+              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+            ],
+            "bbox": [
+              "11.539378 42.36005 12.051999 43.267376"
+            ],
+            "collection": [
+              "{\"outputs_result\":\"eopaas23d15d17d5954239951a927de8a936c5\"}"
+            ]
+          }
+        },
+        "startTime": "2025-04-16T13:45:52.976",
+        "owner": {
+          "role": "ADMIN",
+          "name": "valerio.trenta",
+          "id": 9,
+          "_links": {
+            "self": {
+              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "templated": true
+            }
+          }
+        },
+        "id": 4542,
+        "_links": {
+          "self": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542"
+          },
+          "job": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542{?projection}",
+            "templated": true
+          },
+          "logs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/logs"
+          },
+          "outputFiles": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/outputFiles{?projection}",
+            "templated": true
+          },
+          "subJobs": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/subJobs{?projection}",
+            "templated": true
+          },
+          "jobProcessings": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/jobProcessings"
+          },
+          "config": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/config"
+          },
+          "owner": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/owner{?projection}",
+            "templated": true
+          },
+          "parentJob": {
+            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/parentJob{?projection}",
+            "templated": true
+          }
+        }
+      }
+    ]
+  },
+  "page": {
+    "size": 5,
+    "totalElements": 45,
+    "totalPages": 9,
+    "number": 1
+  }
+}

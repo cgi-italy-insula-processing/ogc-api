@@ -1,0 +1,88 @@
+{
+  "id" : 3039,
+  "inputs" : {
+    "in" : [ "eopaas://refData/11/SampleGeotiff-1.tif" ],
+    "collection" : [ "{\"out\":\"eopaas23d15d17d5954239951a927de8a936c5\"}" ]
+  },
+  "label" : null,
+  "systematicParameter" : null,
+  "tileBasedJobOrdering" : null,
+  "_embedded" : {
+    "owner" : {
+      "role" : "ADMIN",
+      "name" : "valerio.trenta",
+      "id" : 9,
+      "_links" : {
+        "self" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "templated" : true
+        }
+      }
+    },
+    "service" : {
+      "costingExpression" : {
+        "type" : null,
+        "associatedId" : null,
+        "costExpression" : "1",
+        "estimatedCostExpression" : null
+      },
+      "dockerTag" : "eopaas/fastcopiera",
+      "access" : {
+        "published" : false,
+        "publishRequested" : true,
+        "currentLevel" : "SUPERUSER"
+      },
+      "status" : "AVAILABLE",
+      "licence" : "OPEN",
+      "description" : "",
+      "name" : "FastCopierA",
+      "type" : "PROCESSOR",
+      "owner" : {
+        "role" : "ADMIN",
+        "name" : "alice",
+        "id" : 8,
+        "_links" : {
+          "self" : {
+            "href" : "https://int.insula.earth/secure/api/v2.0/users/8{?projection}",
+            "templated" : true
+          }
+        }
+      },
+      "id" : 2,
+      "_links" : {
+        "owner" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/services/2/owner{?projection}",
+          "templated" : true
+        },
+        "contextFiles" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/services/2/contextFiles{?projection}",
+          "templated" : true
+        },
+        "self" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/services/2{?projection}",
+          "templated" : true
+        }
+      }
+    }
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039"
+    },
+    "jobConfig" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039"
+    },
+    "owner" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/owner{?projection}",
+      "templated" : true
+    },
+    "service" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/service{?projection}",
+      "templated" : true
+    },
+    "parent" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/parent{?projection}",
+      "templated" : true
+    }
+  }
+}

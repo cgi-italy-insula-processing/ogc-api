@@ -1,0 +1,18 @@
+get:
+  summary: retrieve the formal description used to deploy a process
+  description: |
+    Access the formal description that can be used to deploy a process on an OGC API - Processes Server Instance.
+  operationId: getPackage
+  tags:
+    - DRU
+  parameters:
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/processId-path.yaml"
+  responses:
+    200:
+      description: The formal used to deploy a process
+      content:
+        application/ogcapppkg+json:
+          schema:
+            $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-dru/ogcapppkg.yaml"
+    404:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotFound.yaml"

@@ -1,0 +1,9 @@
+oneOf:
+  - type: string
+  - type: number
+  - type: integer
+  - type: boolean
+  - type: array
+    items:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/inputValue.yaml"
+  - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/schemas/processes-core/bbox.yaml"

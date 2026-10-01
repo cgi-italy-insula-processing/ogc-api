@@ -1,0 +1,1463 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OGC API - Processes",
+    "description": "Example API Definition for OGC API - Processes",
+    "contact": {
+      "name": "Open Geospatial Consortium",
+      "email": "info@ogc.org"
+    },
+    "license": {
+      "name": "OGC License",
+      "url": "http://www.opengeospatial.org/legal/"
+    },
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost/testogcapi",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "API",
+      "description": "the API API"
+    },
+    {
+      "name": "DRU",
+      "description": "the DRU API"
+    },
+    {
+      "name": "Landing Page",
+      "description": "the Landing Page API"
+    },
+    {
+      "name": "Conformance",
+      "description": "the Conformance API"
+    },
+    {
+      "name": "Jobs",
+      "description": "the Jobs API"
+    }
+  ],
+  "paths": {
+    "/processes/{processId}": {
+      "get": {
+        "tags": [
+          "DRU",
+          "Processes"
+        ],
+        "summary": "retrieve a process description",
+        "description": "The process description contains information about inputs and outputs and a link to the execution-endpoint for the process. The Core does not mandate the use of a specific process description to specify the interface of a process. That said, the Core requirements class makes the following recommendation:  Implementations SHOULD consider supporting the OGC process description.  For more information, see [Section 7.8](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_process_description). ",
+        "operationId": "getProcessDescription",
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A process description.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Process"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "DRU"
+        ],
+        "summary": "replace a process.",
+        "description": "Replaces a process.  For more information, see [Section 6.4](http://docs.ogc.org/DRAFTS/20-044.html#_18582f42-ebc6-4284-9333-c089068f62b6). ",
+        "operationId": "replace",
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/ogcapppkg+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ogcapppkg"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "successful operation (no response body)"
+          },
+          "400": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "the processes is not mutable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "the processes being added is already deployed (i.e. duplicate)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "DRU"
+        ],
+        "summary": "undeploy a process.",
+        "description": "Undeploys a process.  For more information, see [Section 6.5](http://docs.ogc.org/DRAFTS/20-044.html#_16391f9e-538f-4a84-9710-72a6bab82842). ",
+        "operationId": "undeploy",
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "successful operation (no response body)"
+          },
+          "403": {
+            "description": "the processes is not mutable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/processes": {
+      "get": {
+        "tags": [
+          "DRU",
+          "Processes"
+        ],
+        "summary": "retrieve the list of available processes",
+        "description": "The list of processes contains a summary of each process the OGC API - Processes offers, including the link to a more detailed description of the process.  For more information, see [Section 7.7]https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_process_list). ",
+        "operationId": "getProcesses",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information about the available processes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "DRU"
+        ],
+        "summary": "deploy a process.",
+        "description": "Deploys a process.  For more information, see [Section 6.3](http://docs.ogc.org/DRAFTS/20-044.html#_87a6983e-d060-458c-95ab-27e232e64822). ",
+        "operationId": "deploy",
+        "requestBody": {
+          "content": {
+            "application/ogcapppkg+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ogcapppkg"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Process Summary.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessSummary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "the processes is not mutable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "the processes being added is already deployed (i.e. duplicate)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/processes/{processId}/execution": {
+      "post": {
+        "tags": [
+          "DRU",
+          "Processes"
+        ],
+        "summary": "execute a process.",
+        "description": "Executes a process (this may result in the creation of a job resource e.g., for _asynchronous execution_).  For more information, see [Section 7.9](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_create_job). ",
+        "operationId": "execute",
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Execute"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Started asynchronous execution. Created job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusInfo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/processes/{processId}/package": {
+      "get": {
+        "tags": [
+          "DRU"
+        ],
+        "summary": "retrieve the formal description used to deploy a process",
+        "description": "Access the formal description that can be used to deploy a process on an OGC API - Processes Server Instance. ",
+        "operationId": "getPackage",
+        "parameters": [
+          {
+            "name": "processId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The formal used to deploy a process",
+            "content": {
+              "application/ogcapppkg+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ogcapppkg"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ogcapppkg"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/ogcapppkg+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "retrieve the list of jobs.",
+        "description": "Lists available jobs.  For more information, see [Section 12](https://docs.ogc.org/is/18-062r2/18-062r2.html#Job_list). ",
+        "operationId": "getJobs",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "processID",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "running",
+                  "successful",
+                  "failed",
+                  "dismissed"
+                ]
+              }
+            }
+          },
+          {
+            "name": "minDuration",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "maxDuration",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "datetime",
+            "in": "query",
+            "description": "Either a date-time or an interval, half-bounded or bounded. Date and time expressions adhere to RFC 3339. Half-bounded intervals are expressed using double-dots.  Examples:  * A date-time: \"2018-02-12T23:20:50Z\" * A bounded interval: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\" * Half-bounded intervals: \"2018-02-12T00:00:00Z/..\" or \"../2018-03-18T12:31:12Z\"  Only features that have a temporal property that intersects the value of `datetime` are selected.  If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of jobs for this process.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobList"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs/{jobId}": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "retrieve the status of a job",
+        "description": "Shows the status of a job.   For more information, see [Section 7.10](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_retrieve_status_info). ",
+        "operationId": "getStatus",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "local identifier of a job",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The status of a job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusInfo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "cancel a job execution, remove a finished job",
+        "description": "Cancel a job execution and remove it from the jobs list.  For more information, see [Section 14]https://docs.ogc.org/is/18-062r2/18-062r2.html#Dismiss). ",
+        "operationId": "dismiss",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "local identifier of a job",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The status of a job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusInfo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs/{jobId}/results": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "retrieve the result(s) of a job",
+        "description": "Lists available results of a job. In case of a failure, lists exceptions instead.  For more information, see [Section 7.11](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_retrieve_job_results). ",
+        "operationId": "getResult",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "local identifier of a job",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The processing results of a job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InlineOrRefData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jobs/{jobId}/results/{outputId}": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "summary": "retrieve the result of a job",
+        "description": "Shows a single output of a job. In case of a failure, shows exceptions instead.  For more information, see [Section 7.11](https://docs.ogc.org/is/18-062r2/18-062r2.html#sc_retrieve_job_results). ",
+        "operationId": "getOutputResult",
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "local identifier of a job",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputId",
+            "in": "path",
+            "description": "identifier of the output of a job",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The processing output result of a job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/geo+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested resource does not exist on the server. For example, a path parameter had an incorrect value.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/conformance": {
+      "get": {
+        "tags": [
+          "Conformance"
+        ],
+        "summary": "Retrieve the set of OGC API conformance classes that are supported by this service.",
+        "operationId": "getConformance",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "description": "The format of the response. If no value is provided, the accept header is used to determine the format. Accepted values are 'json' or 'html'.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The URIs of all conformance classes supported by the server  To support \"generic\" clients that want to access multiple OGC API - Processes implementations - and not \"just\" a specific API / server, the server declares the conformance classes it implements and conforms to.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfClasses"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Content negotiation failed. For example, the `Accept` header submitted in the request did not support any of the media types supported by the server for the requested resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api": {
+      "get": {
+        "tags": [
+          "API"
+        ],
+        "summary": "Retrieve this API definition.",
+        "operationId": "getAPI",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "description": "The format of the response. If no value is provided, the accept header is used to determine the format. Accepted values are 'json' or 'html'.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The OpenAPI definition of the API.",
+            "content": {
+              "application/vnd.oai.openapi+json;version=3.0": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Content negotiation failed. For example, the `Accept` header submitted in the request did not support any of the media types supported by the server for the requested resource.",
+            "content": {
+              "application/vnd.oai.openapi+json;version=3.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/vnd.oai.openapi+json;version=3.0": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Landing Page"
+        ],
+        "summary": "Retrieve the OGC API landing page for this service.",
+        "operationId": "getLandingPage",
+        "parameters": [
+          {
+            "name": "f",
+            "in": "query",
+            "description": "The format of the response. If no value is provided, the accept header is used to determine the format. Accepted values are 'json' or 'html'.",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The landing page provides links to the API definition (link relation `service-desc`, in this case path `/api`), to the Conformance declaration (path `/conformance`, link relation `http://www.opengis.net/def/rel/ogc/1.0/conformance`), and to other resources.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LandingPage"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Content negotiation failed. For example, the `Accept` header submitted in the request did not support any of the media types supported by the server for the requested resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "A server error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "exception": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "instance": {
+            "type": "string"
+          }
+        },
+        "description": "JSON schema for exceptions based on RFC 7807"
+      },
+      "InputDescription": {
+        "required": [
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metadata"
+            }
+          },
+          "schema": {
+            "$ref": "#/components/schemas/ProcessesCoreSchema"
+          },
+          "dataClasses": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "minOccurs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxOccurs": {
+            "$ref": "#/components/schemas/InputDescriptionAllOfMaxOccurs"
+          },
+          "valuePassing": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "byValue",
+                "byReference"
+              ]
+            }
+          }
+        }
+      },
+      "InputDescriptionAllOfMaxOccurs": {
+        "type": "object"
+      },
+      "Link": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "hreflang": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "deprecation": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "templated": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Metadata": {
+        "type": "object"
+      },
+      "Ogcapppkg": {
+        "required": [
+          "executionUnit"
+        ],
+        "type": "object",
+        "properties": {
+          "processDescription": {
+            "$ref": "#/components/schemas/OgcapppkgProcessDescription"
+          },
+          "executionUnit": {
+            "$ref": "#/components/schemas/OgcapppkgExecutionUnit"
+          }
+        }
+      },
+      "OgcapppkgExecutionUnit": {
+        "type": "object"
+      },
+      "OgcapppkgProcessDescription": {
+        "required": [
+          "process"
+        ],
+        "type": "object",
+        "properties": {
+          "process": {
+            "$ref": "#/components/schemas/Process"
+          }
+        }
+      },
+      "OutputDescription": {
+        "required": [
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metadata"
+            }
+          },
+          "schema": {
+            "$ref": "#/components/schemas/ProcessesCoreSchema"
+          }
+        }
+      },
+      "Process": {
+        "required": [
+          "id",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metadata"
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "jobControlOptions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "sync-execute",
+                "async-execute",
+                "dismiss"
+              ]
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          },
+          "inputs": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/InputDescription"
+            }
+          },
+          "outputs": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/OutputDescription"
+            }
+          }
+        }
+      },
+      "ProcessesCoreSchema": {
+        "type": "object"
+      },
+      "ProcessSummary": {
+        "required": [
+          "id",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metadata"
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "jobControlOptions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "sync-execute",
+                "async-execute",
+                "dismiss"
+              ]
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          }
+        }
+      },
+      "StatusInfo": {
+        "required": [
+          "id",
+          "status",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Metadata"
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "processID": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string",
+            "example": "[process, wps, openeo]"
+          },
+          "request": {
+            "$ref": "#/components/schemas/StatusInfoAllOfRequest"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "accepted",
+              "running",
+              "successful",
+              "failed",
+              "dismissed"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "exception": {
+            "$ref": "#/components/schemas/exception"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "started": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finished": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "progress": {
+            "maximum": 100,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          }
+        }
+      },
+      "StatusInfoAllOfRequest": {
+        "type": "object"
+      },
+      "Execute": {
+        "type": "object",
+        "properties": {
+          "processID": {
+            "type": "string",
+            "format": "uri"
+          },
+          "inputs": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Input"
+            }
+          }
+        },
+        "description": "An execution request specifying any inputs for the process to execute, and optionally to select specific outputs. With support for _Part 3: Workflows and chaining_, this execution request may specify a complex processing workflow e.g., including nested processes and OGC API collections as inputs."
+      },
+      "Input": {
+        "type": "object"
+      },
+      "ProcessList": {
+        "required": [
+          "links",
+          "processes"
+        ],
+        "type": "object",
+        "properties": {
+          "processes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProcessSummary"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          }
+        }
+      },
+      "JobList": {
+        "required": [
+          "jobs",
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "jobs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StatusInfo"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          }
+        }
+      },
+      "InlineOrRefData": {
+        "type": "object"
+      },
+      "ConfClasses": {
+        "required": [
+          "conformsTo"
+        ],
+        "type": "object",
+        "properties": {
+          "conformsTo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LandingPage": {
+        "required": [
+          "links"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Example processing server"
+          },
+          "description": {
+            "type": "string",
+            "example": "Example server implementing the OGC API - Processes 1.0 Standard"
+          },
+          "attribution": {
+            "type": "string",
+            "description": "The `attribution` should be short and intended for presentation to a user, for example, in a corner of a map. Parts of the text can be links to other resources if additional information is needed. The string can include HTML markup."
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            }
+          }
+        }
+      }
+    }
+  }
+}

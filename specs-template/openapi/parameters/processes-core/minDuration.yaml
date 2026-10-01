@@ -1,0 +1,5 @@
+name: minDuration
+in: query
+required: false
+schema:
+  type: integer

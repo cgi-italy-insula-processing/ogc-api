@@ -1,0 +1,12 @@
+{
+    "jobs": [],
+    "links": [
+        {
+            "href": "http://localhost/testogcapi/jobs?limit=1&offset=0&processID=process&status=ACCEPTED&datetime=2025-03-12T14%3A56%3A09{&minDuration,maxDuration,type}",
+            "rel": "self",
+            "type": "application/json",
+            "hreflang": null,
+            "title": "Get Jobs"
+        }
+    ]
+}

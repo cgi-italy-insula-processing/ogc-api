@@ -1,0 +1,23 @@
+get:
+  summary: retrieve the list of jobs.
+  description: |
+    Lists available jobs.
+    
+    For more information, see [Section 12](https://docs.ogc.org/is/18-062r2/18-062r2.html#Job_list).
+  operationId: getJobs
+  tags:
+    - Jobs
+  parameters:
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/limit.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/offset.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/processId-query.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/status.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/minDuration.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/maxDuration.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/processes-core/type.yaml"
+    - $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/parameters/common-geodata/datetime.yaml"
+  responses:
+    200:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/processes-core/rJobList.yaml"
+    404:
+      $ref: "_OGC_API_PROCESSES_SPECS_ROOT_/responses/common-core/rNotFound.yaml"

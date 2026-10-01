@@ -1,0 +1,82 @@
+{
+  "id" : 147,
+  "name" : "sardem-sarsen",
+  "description" : "service description",
+  "type" : "PROCESSOR",
+  "dockerTag" : "eopaas/sardem-sarsen",
+  "stripProxyPath" : true,
+  "licence" : "OPEN",
+  "status" : "DISABLED",
+  "serviceDescriptor" : {
+    "id" : "sardem-sarsen",
+    "title" : "sardem-sarsen",
+    "description" : "service descriptor description",
+    "version" : "N/A",
+    "storeSupported" : false,
+    "statusSupported" : false,
+    "dataInputs" : [ {
+      "id" : "bbox",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "true",
+        "format" : "OTHER"
+      },
+      "inputBinding" : {
+        "position" : 1
+      }
+    } ],
+    "dataOutputs" : [ {
+      "id" : "outputs_result",
+      "title" : "output",
+      "description" : "outputs result",
+      "minOccurs" : 1,
+      "maxOccurs" : 1,
+      "data" : "LITERAL",
+      "defaultAttrs" : {
+        "dataType" : "string"
+      },
+      "supportedAttrs" : [ ],
+      "platformMetadata" : {
+        "preventUrlDownload" : "false",
+        "format" : "CATALOGUE",
+        "type" : "STAC"
+      }
+    } ],
+    "dockerCommand" : "/app/sardem-sarsen/sardem-sarsen.sh"
+  },
+  "dockerBuildInfo" : {
+    "dockerBuildStatus" : "COMPLETED"
+  },
+  "port" : "8080/tcp",
+  "groupId" : 0,
+  "cwl" : {
+    "url" : "https://raw.githubusercontent.com/MAAP-Project/sardem-sarsen/refs/heads/esa-ogc/nasa/ogc/workflows/process_sardem-sarsen_mlucas_nasa_ogc.cwl",
+    "document" : "document"
+  },
+  "dataSourceName" : "PLATFORM_SERVICE_sardem-sarsen",
+  "_embedded" : {
+    "owner" : {
+      "role" : "ADMIN",
+      "name" : "valerio.trenta",
+      "id" : 9,
+      "_links" : {
+        "self" : {
+          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "templated" : true
+        }
+      }
+    }
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://int.insula.earth/secure/api/v2.0/services/147",
+      "rel" : "self"
+    }
+  }
+}
