@@ -120,7 +120,7 @@
       "id" : 9,
       "_links" : {
         "self" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
           "templated" : true
         }
       }
@@ -128,7 +128,7 @@
   },
   "_links" : {
     "self" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/147",
+      "href" : "https://processing.example.com/secure/api/v2.0/services/147",
       "rel" : "self"
     }
   }

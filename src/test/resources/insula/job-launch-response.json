@@ -22,17 +22,17 @@
   "inputDate" : null,
   "_links" : {
     "self" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108"
+      "href" : "https://processing.example.com/secure/api/v2.0/jobs/4108"
     },
     "job" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108{?projection}",
+      "href" : "https://processing.example.com/secure/api/v2.0/jobs/4108{?projection}",
       "templated" : true
     },
     "logs" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108/logs"
+      "href" : "https://processing.example.com/secure/api/v2.0/jobs/4108/logs"
     },
     "cancel" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobs/4108/cancel"
+      "href" : "https://processing.example.com/secure/api/v2.0/jobs/4108/cancel"
     }
   }
 }

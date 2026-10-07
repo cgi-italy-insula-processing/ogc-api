@@ -1,3 +1,51 @@
+# OGC API - Processes facade
+
+Spring Boot service implementing [OGC API - Processes](https://ogcapi.ogc.org/processes/)
+Part 1 (Core) and Part 2 (Deploy, Replace, Undeploy) on top of the processing server REST
+API of [insula](https://github.com/cgi-italy-insula-processing/insula). It translates OGC
+requests (process deployment from an OGC Application Package, execution, job status,
+results) into calls to the processing server, which runs the jobs as Argo Workflows.
+
+## Configuration
+
+Configuration is plain Spring Boot `application.properties`; the image reads an
+`application.properties` from its working directory. The service listens on 8080 and
+exposes the actuator (health and info, with liveness and readiness groups) on 8081.
+
+| Property | Default | Description |
+| --- | --- | --- |
+| `server.servlet.context-path` | none | Context path of the API, for example `/ogcapi` |
+| `openapi.oGCAPIProcesses.base-path` | generated | Base path of the API controllers inside the context path; set it to `/` when a context path is used |
+| `ogcapi.processes.insula.client.baseUrl` | none | Processing server REST API, for example `http://<server-service>:8090/secure/api/v2.0` |
+| `ogcapi.processes.insula.client.connectTimeout`, `readTimeout` | 600, 1200 (ms) | Timeouts of the calls to the processing server; raise them for real workloads |
+| `ogcapi.processes.security.enabled` | `true` | Reads the user and tenant from request headers (`ogcapi.processes.insula.headers.*`). Set to `false` with the open-source processing server, which has no authentication |
+| `ogcapi.processes.insula.searchApi.enabled` | `true` | Uses the processing server search endpoint for STAC outputs. Set to `false` with the open-source processing server |
+| `ogcapi.processes.job.costEstimate.enabled` | `true` | Estimates the job cost before launching it. Set to `false` with the open-source processing server |
+| `ogcapi.processes.insula.getSubJobsApi.enabled` | `true` | Adds parent and sub-job links to job descriptions |
+
+## Build
+
+Requirements: JDK 17 and, for the image, a Docker daemon.
+
+```sh
+./gradlew build                 # generates the server stubs from specs-template, compiles and tests
+./gradlew buildDockerImage      # image <group>/ogc-api-processes:<version>, prefixed with -PDOCKER_REGISTRY_URL when set
+```
+
+Released images are published as
+`ghcr.io/cgi-italy-insula-processing/com.cgi.eoss.ogc/ogc-api-processes`.
+
+## Deployment
+
+The service is deployed with the processing server by the `eoepca` Helm chart
+([helm-chart](https://github.com/cgi-italy-insula-processing/helm-chart)), which ships a
+working configuration; the [deployment](https://github.com/cgi-italy-insula-processing/deployment)
+scripts generate the chart values, validate the release and run an end-to-end test.
+
+## License
+
+Apache License 2.0, see [LICENSE](LICENSE).
+
 # Supported OGC API Processes endpoints
 
 - GET /

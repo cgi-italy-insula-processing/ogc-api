@@ -111,7 +111,7 @@ public class InsulaServiceMapperTest {
 
     @Test
     public void testToOgcApppkg_ReturnsOgcapppkgWithSelfLink_WhenServiceResponseDoesNotContainCwl() {
-        String selfLink = "https://insula.earth/self";
+        String selfLink = "https://processing.example.com/self";
         ServiceResponse serviceResponse = ServiceResponse.builder()
                 .links(Collections.singletonMap("self", org.springframework.hateoas.Link.of(selfLink)))
                 .build();

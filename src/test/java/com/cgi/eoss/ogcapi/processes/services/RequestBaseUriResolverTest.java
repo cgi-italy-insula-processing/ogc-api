@@ -21,7 +21,7 @@ class RequestBaseUriResolverTest {
     void testResolveFrom_ReturnsBaseUriWithoutPathAndQuery_WhenHttpServletRequestIsPresent() {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setScheme("https");
-        request.setServerName("int.insula.earth");
+        request.setServerName("processing.example.com");
         request.setServerPort(8080);
         request.setRequestURI("/testogcapi/jobs/4421");
         request.setQueryString("projection=detailedJob&foo=bar");
@@ -30,7 +30,7 @@ class RequestBaseUriResolverTest {
 
         URI baseUri = resolver.resolveFrom(webRequest);
 
-        assertThat(baseUri).isEqualTo(URI.create("https://int.insula.earth:8080"));
+        assertThat(baseUri).isEqualTo(URI.create("https://processing.example.com:8080"));
     }
 
     @Test

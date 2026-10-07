@@ -20,7 +20,7 @@
               "id": 9,
               "_links": {
                 "self": {
-                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
                   "templated": true
                 }
               }
@@ -28,23 +28,23 @@
             "id": 5389,
             "_links": {
               "jobs": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/jobs{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389/jobs{?projection}",
                 "templated": true
               },
               "collection": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/collection{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389/collection{?projection}",
                 "templated": true
               },
               "owner": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389/owner{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389/owner{?projection}",
                 "templated": true
               },
               "self": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389{?projection}",
                 "templated": true
               },
               "download": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389{?projection}/dl",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389{?projection}/dl",
                 "templated": true
               }
             }
@@ -76,7 +76,7 @@
               "internal"
             ],
             "stac_catalog_folder": [
-              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+              "https://processing.example.com/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
             ],
             "bbox": [
               "11.539378 42.36005 12.051999 43.267376"
@@ -93,7 +93,7 @@
           "id": 9,
           "_links": {
             "self": {
-              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
               "templated": true
             }
           }
@@ -101,38 +101,38 @@
         "id": 4571,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571"
           },
           "job": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571{?projection}",
             "templated": true
           },
           "logs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/logs"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/logs"
           },
           "output-outputs_result": {
-            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5389"
+            "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5389"
           },
           "outputFiles": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/outputFiles{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/outputFiles{?projection}",
             "templated": true
           },
           "subJobs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/subJobs{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/subJobs{?projection}",
             "templated": true
           },
           "jobProcessings": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/jobProcessings"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/jobProcessings"
           },
           "config": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/config"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/config"
           },
           "owner": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/owner{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/owner{?projection}",
             "templated": true
           },
           "parentJob": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4571/parentJob{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4571/parentJob{?projection}",
             "templated": true
           }
         }
@@ -162,7 +162,7 @@
               "enclosure"
             ],
             "stac_catalog_folder": [
-              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+              "https://processing.example.com/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
             ],
             "bbox": [
               "11.539378 42.36005 12.051999 43.267376"
@@ -179,7 +179,7 @@
           "id": 9,
           "_links": {
             "self": {
-              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
               "templated": true
             }
           }
@@ -187,35 +187,35 @@
         "id": 4540,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540"
           },
           "job": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540{?projection}",
             "templated": true
           },
           "logs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/logs"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/logs"
           },
           "outputFiles": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/outputFiles{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/outputFiles{?projection}",
             "templated": true
           },
           "subJobs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/subJobs{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/subJobs{?projection}",
             "templated": true
           },
           "jobProcessings": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/jobProcessings"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/jobProcessings"
           },
           "config": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/config"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/config"
           },
           "owner": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/owner{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/owner{?projection}",
             "templated": true
           },
           "parentJob": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4540/parentJob{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4540/parentJob{?projection}",
             "templated": true
           }
         }
@@ -239,7 +239,7 @@
               "id": 9,
               "_links": {
                 "self": {
-                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
                   "templated": true
                 }
               }
@@ -247,23 +247,23 @@
             "id": 5387,
             "_links": {
               "jobs": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/jobs{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387/jobs{?projection}",
                 "templated": true
               },
               "collection": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/collection{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387/collection{?projection}",
                 "templated": true
               },
               "owner": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387/owner{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387/owner{?projection}",
                 "templated": true
               },
               "self": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387{?projection}",
                 "templated": true
               },
               "download": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387{?projection}/dl",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387{?projection}/dl",
                 "templated": true
               }
             }
@@ -295,7 +295,7 @@
               "internal"
             ],
             "stac_catalog_folder": [
-              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+              "https://processing.example.com/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
             ],
             "bbox": [
               "11.539378 42.36005 12.051999 43.267376"
@@ -312,7 +312,7 @@
           "id": 9,
           "_links": {
             "self": {
-              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
               "templated": true
             }
           }
@@ -320,38 +320,38 @@
         "id": 4556,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556"
           },
           "job": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556{?projection}",
             "templated": true
           },
           "logs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/logs"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/logs"
           },
           "output-outputs_result": {
-            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5387"
+            "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5387"
           },
           "outputFiles": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/outputFiles{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/outputFiles{?projection}",
             "templated": true
           },
           "subJobs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/subJobs{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/subJobs{?projection}",
             "templated": true
           },
           "jobProcessings": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/jobProcessings"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/jobProcessings"
           },
           "config": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/config"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/config"
           },
           "owner": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/owner{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/owner{?projection}",
             "templated": true
           },
           "parentJob": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4556/parentJob{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4556/parentJob{?projection}",
             "templated": true
           }
         }
@@ -375,7 +375,7 @@
               "id": 9,
               "_links": {
                 "self": {
-                  "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+                  "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
                   "templated": true
                 }
               }
@@ -383,23 +383,23 @@
             "id": 5388,
             "_links": {
               "jobs": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/jobs{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388/jobs{?projection}",
                 "templated": true
               },
               "collection": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/collection{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388/collection{?projection}",
                 "templated": true
               },
               "owner": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388/owner{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388/owner{?projection}",
                 "templated": true
               },
               "self": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388{?projection}",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388{?projection}",
                 "templated": true
               },
               "download": {
-                "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388{?projection}/dl",
+                "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388{?projection}/dl",
                 "templated": true
               }
             }
@@ -430,7 +430,7 @@
               "internal"
             ],
             "stac_catalog_folder": [
-              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+              "https://processing.example.com/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
             ],
             "bbox": [
               "11.539378 42.36005 12.051999 43.267376"
@@ -447,7 +447,7 @@
           "id": 9,
           "_links": {
             "self": {
-              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
               "templated": true
             }
           }
@@ -455,38 +455,38 @@
         "id": 4562,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562"
           },
           "job": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562{?projection}",
             "templated": true
           },
           "logs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/logs"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/logs"
           },
           "output-outputs_result": {
-            "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/5388"
+            "href": "https://processing.example.com/secure/api/v2.0/platformFiles/5388"
           },
           "outputFiles": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/outputFiles{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/outputFiles{?projection}",
             "templated": true
           },
           "subJobs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/subJobs{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/subJobs{?projection}",
             "templated": true
           },
           "jobProcessings": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/jobProcessings"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/jobProcessings"
           },
           "config": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/config"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/config"
           },
           "owner": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/owner{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/owner{?projection}",
             "templated": true
           },
           "parentJob": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4562/parentJob{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4562/parentJob{?projection}",
             "templated": true
           }
         }
@@ -516,7 +516,7 @@
               "internal"
             ],
             "stac_catalog_folder": [
-              "https://int.insula.earth/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
+              "https://processing.example.com/secure/api/v2.0/search?page=0&resultsPerPage=20&catalogue=ASCEND_DATA&ascendCollection=EOP:ESA:Sentinel-1&ascendCollection_productType=GRD&ascendCollection_processingLevel=LEVEL1&ascendCollection_sensorMode=IW&ascendCollection_ids=23dec1a6-7457-4f8b-9c4d-bac04455e18d#23dec1a6-7457-4f8b-9c4d-bac04455e18d"
             ],
             "bbox": [
               "11.539378 42.36005 12.051999 43.267376"
@@ -533,7 +533,7 @@
           "id": 9,
           "_links": {
             "self": {
-              "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+              "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
               "templated": true
             }
           }
@@ -541,35 +541,35 @@
         "id": 4542,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542"
           },
           "job": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542{?projection}",
             "templated": true
           },
           "logs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/logs"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/logs"
           },
           "outputFiles": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/outputFiles{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/outputFiles{?projection}",
             "templated": true
           },
           "subJobs": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/subJobs{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/subJobs{?projection}",
             "templated": true
           },
           "jobProcessings": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/jobProcessings"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/jobProcessings"
           },
           "config": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/config"
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/config"
           },
           "owner": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/owner{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/owner{?projection}",
             "templated": true
           },
           "parentJob": {
-            "href": "https://int.insula.earth/secure/api/v2.0/jobs/4542/parentJob{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/jobs/4542/parentJob{?projection}",
             "templated": true
           }
         }
