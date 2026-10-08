@@ -35,7 +35,7 @@
         "id": 9,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
             "templated": true
           }
         }
@@ -43,7 +43,7 @@
       "id": 4864,
       "_links": {
         "download": {
-          "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/4864{?projection}/dl",
+          "href": "https://processing.example.com/secure/api/v2.0/platformFiles/4864{?projection}/dl",
           "rel": "self",
           "templated": true
         }
@@ -64,7 +64,7 @@
         "id": 9,
         "_links": {
           "self": {
-            "href": "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+            "href": "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
             "templated": true
           }
         }
@@ -72,7 +72,7 @@
       "id": 4865,
       "_links": {
         "download": {
-          "href": "https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl",
+          "href": "https://processing.example.com/secure/api/v2.0/platformFiles/4865{?projection}/dl",
           "rel": "self",
           "templated": true
         }
@@ -108,7 +108,7 @@
     "id": 18,
     "_links": {
       "self": {
-        "href": "https://int.insula.earth/secure/api/v2.0/users/18{?projection}",
+        "href": "https://processing.example.com/secure/api/v2.0/users/18{?projection}",
         "templated": true
       }
     }
@@ -125,11 +125,11 @@
       "rel": "rel"
     },
     "parentJob": {
-      "href": "https://int.insula.earth/secure/api/v2.0/jobs/4421/parentJob{?projection}",
+      "href": "https://processing.example.com/secure/api/v2.0/jobs/4421/parentJob{?projection}",
       "templated": true
     },
     "subJobs": {
-      "href": "https://int.insula.earth/secure/api/v2.0/jobs/4421/subJobs{?projection}",
+      "href": "https://processing.example.com/secure/api/v2.0/jobs/4421/subJobs{?projection}",
       "templated": true
     }
   }

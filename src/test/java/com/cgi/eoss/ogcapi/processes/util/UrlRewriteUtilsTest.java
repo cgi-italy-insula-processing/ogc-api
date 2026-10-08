@@ -9,8 +9,8 @@ class UrlRewriteUtilsTest {
 
     @Test
     void testRewriteBaseUrl_ReturnsOriginal_WhenTargetBaseIsNull() {
-        assertThat(UrlRewriteUtils.rewriteBaseUrl("http://eopaas-int-server:8090/", null))
-                .isEqualTo("http://eopaas-int-server:8090/");
+        assertThat(UrlRewriteUtils.rewriteBaseUrl("http://eoepca-server-service:8090/", null))
+                .isEqualTo("http://eoepca-server-service:8090/");
     }
 
     @Test
@@ -20,57 +20,57 @@ class UrlRewriteUtilsTest {
 
     @Test
     void testRewriteBaseUrl_TrimsTrailingSlashFromTargetBase() {
-        String original = "http://eopaas-int-server:8090/secure/api/v2.0/files/1?token=abc#frag";
-        URI target = URI.create("https://int.insula.earth/");
+        String original = "http://eoepca-server-service:8090/secure/api/v2.0/files/1?token=abc#frag";
+        URI target = URI.create("https://processing.example.com/");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("https://int.insula.earth/secure/api/v2.0/files/1?token=abc#frag");
+                .isEqualTo("https://processing.example.com/secure/api/v2.0/files/1?token=abc#frag");
     }
 
     @Test
     void testRewriteBaseUrl_rewritesAuthorityOnlyUrl() {
-        String original = "http://eopaas-int-server:8090";
-        URI target = URI.create("https://int.insula.earth");
+        String original = "http://eoepca-server-service:8090";
+        URI target = URI.create("https://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("https://int.insula.earth");
+                .isEqualTo("https://processing.example.com");
     }
 
     @Test
     void testRewriteBaseUrl_preservesQueryWhenNoPath() {
-        String original = "http://eopaas-int-server:8090?x=1";
-        URI target = URI.create("https://int.insula.earth");
+        String original = "http://eoepca-server-service:8090?x=1";
+        URI target = URI.create("https://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("https://int.insula.earth?x=1");
+                .isEqualTo("https://processing.example.com?x=1");
     }
 
     @Test
     void testRewriteBaseUrl_preservesFragmentWhenNoPath() {
-        String original = "http://eopaas-int-server:8090#frag";
-        URI target = URI.create("https://int.insula.earth");
+        String original = "http://eoepca-server-service:8090#frag";
+        URI target = URI.create("https://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("https://int.insula.earth#frag");
+                .isEqualTo("https://processing.example.com#frag");
     }
 
     @Test
     void testRewriteBaseUrl_doesNotRewriteRelativeHref() {
         String original = "/secure/api/v2.0/files/1";
-        URI target = URI.create("https://int.insula.earth");
+        URI target = URI.create("https://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
                 .isEqualTo("/secure/api/v2.0/files/1");
     }
 
     @Test
     void testRewriteBaseUrl_UsesStringReplacement_WhenHrefContainsUriTemplate() {
-        String original = "https://eopaas-int-server:8090/secure/api/v2.0/platformFiles/4864{?projection}/dl#frag";
-        URI target = URI.create("http://int.insula.earth");
+        String original = "https://eoepca-server-service:8090/secure/api/v2.0/platformFiles/4864{?projection}/dl#frag";
+        URI target = URI.create("http://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("http://int.insula.earth/secure/api/v2.0/platformFiles/4864{?projection}/dl#frag");
+                .isEqualTo("http://processing.example.com/secure/api/v2.0/platformFiles/4864{?projection}/dl#frag");
     }
 
     @Test
     void testRewriteBaseUrl_FallsBackToStringReplacement_WhenOriginalHrefIsNotParseable() {
-        String original = "http://eopaas-int-server:8090/secure/api/v2.0/files/1?token=ab c#frag";
-        URI target = URI.create("https://int.insula.earth");
+        String original = "http://eoepca-server-service:8090/secure/api/v2.0/files/1?token=ab c#frag";
+        URI target = URI.create("https://processing.example.com");
         assertThat(UrlRewriteUtils.rewriteBaseUrl(original, target))
-                .isEqualTo("https://int.insula.earth/secure/api/v2.0/files/1?token=ab c#frag");
+                .isEqualTo("https://processing.example.com/secure/api/v2.0/files/1?token=ab c#frag");
     }
 }

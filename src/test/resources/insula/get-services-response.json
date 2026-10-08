@@ -57,7 +57,7 @@
         "id" : 35,
         "_links" : {
           "self" : {
-            "href" : "https://int.insula.earth/secure/api/v2.0/users/35{?projection}",
+            "href" : "https://processing.example.com/secure/api/v2.0/users/35{?projection}",
             "templated" : true
           }
         }
@@ -65,18 +65,18 @@
       "id" : 70,
       "_links" : {
         "self" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/70"
+          "href" : "https://processing.example.com/secure/api/v2.0/services/70"
         },
         "service" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/70{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/70{?projection}",
           "templated" : true
         },
         "contextFiles" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/70/contextFiles{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/70/contextFiles{?projection}",
           "templated" : true
         },
         "owner" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/70/owner{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/70/owner{?projection}",
           "templated" : true
         }
       }
@@ -139,7 +139,7 @@
         "id" : 11,
         "_links" : {
           "self" : {
-            "href" : "https://int.insula.earth/secure/api/v2.0/users/11{?projection}",
+            "href" : "https://processing.example.com/secure/api/v2.0/users/11{?projection}",
             "templated" : true
           }
         }
@@ -147,18 +147,18 @@
       "id" : 7,
       "_links" : {
         "self" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/7"
+          "href" : "https://processing.example.com/secure/api/v2.0/services/7"
         },
         "service" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/7{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/7{?projection}",
           "templated" : true
         },
         "contextFiles" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/7/contextFiles{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/7/contextFiles{?projection}",
           "templated" : true
         },
         "owner" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/7/owner{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/7/owner{?projection}",
           "templated" : true
         }
       }
@@ -166,22 +166,22 @@
   },
   "_links" : {
     "first" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=0"
+      "href" : "https://processing.example.com/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=0"
     },
     "self" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService"
+      "href" : "https://processing.example.com/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService"
     },
     "next" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=1"
+      "href" : "https://processing.example.com/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=1"
     },
     "last" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=61"
+      "href" : "https://processing.example.com/secure/api/v2.0/services/search/parametricFind?size=2&status=AVAILABLE,IN_DEVELOPMENT&projection=detailedPlatformService&page=61"
     },
     "profile" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/profile/services"
+      "href" : "https://processing.example.com/secure/api/v2.0/profile/services"
     },
     "search" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/services/search"
+      "href" : "https://processing.example.com/secure/api/v2.0/services/search"
     }
   },
   "page" : {

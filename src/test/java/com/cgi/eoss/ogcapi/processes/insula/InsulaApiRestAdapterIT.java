@@ -107,7 +107,7 @@ public abstract class InsulaApiRestAdapterIT {
                     .dataOutputs(Collections.emptyList())
                     .build());
             assertThat(serviceResponse.getLinks()).isEqualTo(Map.of(
-                    "self", Link.of("https://int.insula.earth/secure/api/v2.0/services/92", "self")
+                    "self", Link.of("https://processing.example.com/secure/api/v2.0/services/92", "self")
             ));
         }
 
@@ -186,7 +186,7 @@ public abstract class InsulaApiRestAdapterIT {
             );
             assertThat(serviceResponse.getLinks()).isEqualTo(
                     Map.of(
-                    "self", Link.of("https://int.insula.earth/secure/api/v2.0/services/147", "self")
+                    "self", Link.of("https://processing.example.com/secure/api/v2.0/services/147", "self")
                     )
             );
         }
@@ -486,11 +486,11 @@ public abstract class InsulaApiRestAdapterIT {
             assertThat(jobGetResponse.getOutputFiles()).isEqualTo(List.of(
                     OutputFile.builder()
                             .filename("c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputOne/SampleGeotiff-1.tif")
-                            .links(Map.of("download", Link.of("https://int.insula.earth/secure/api/v2.0/platformFiles/4864{?projection}/dl")))
+                            .links(Map.of("download", Link.of("https://processing.example.com/secure/api/v2.0/platformFiles/4864{?projection}/dl")))
                             .build(),
                     OutputFile.builder()
                             .filename("c7d6fedd-5e2d-4a31-b359-95c69e16ca92/outputTwo/SampleGeotiff-2.tif")
-                            .links(Map.of("download", Link.of("https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
+                            .links(Map.of("download", Link.of("https://processing.example.com/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
                             .build()
             ));
         }
@@ -517,9 +517,9 @@ public abstract class InsulaApiRestAdapterIT {
             assertThat(jobGetResponse.getLinks()).containsKeys("parentJob", "subJobs");
 
             assertThat(jobGetResponse.getLinks().get("parentJob").get(0).getHref())
-                    .isEqualTo("https://int.insula.earth/secure/api/v2.0/jobs/4421/parentJob{?projection}");
+                    .isEqualTo("https://processing.example.com/secure/api/v2.0/jobs/4421/parentJob{?projection}");
             assertThat(jobGetResponse.getLinks().get("subJobs").get(0).getHref())
-                    .isEqualTo("https://int.insula.earth/secure/api/v2.0/jobs/4421/subJobs{?projection}");
+                    .isEqualTo("https://processing.example.com/secure/api/v2.0/jobs/4421/subJobs{?projection}");
         }
 
         @Test
@@ -566,7 +566,7 @@ public abstract class InsulaApiRestAdapterIT {
                             .outputFiles(List.of(OutputFile.builder()
                                     .filename("c7d6fedd-5e2d-4a31-b359-95c69e16ca92/out/SampleGeotiff-1.tif")
                                     .links(Map.of("download",
-                                            Link.of("https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
+                                            Link.of("https://processing.example.com/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
                                     .build()))
                             .extId("c7d6fedd-5e2d-4a31-b359-95c69e16ca92")
                             .links(Map.of("self", List.of(Link.of("href", "rel"))))
@@ -621,7 +621,7 @@ public abstract class InsulaApiRestAdapterIT {
                             .outputFiles(List.of(OutputFile.builder()
                                     .filename("c7d6fedd-5e2d-4a31-b359-95c69e16ca92/out/SampleGeotiff-1.tif")
                                     .links(Map.of("download",
-                                            Link.of("https://int.insula.earth/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
+                                            Link.of("https://processing.example.com/secure/api/v2.0/platformFiles/4865{?projection}/dl")))
                                     .build()))
                             .extId("c7d6fedd-5e2d-4a31-b359-95c69e16ca92")
                             .links(Map.of("self", List.of(Link.of("href", "rel"))))

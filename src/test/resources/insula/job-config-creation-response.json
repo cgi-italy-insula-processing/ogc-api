@@ -14,7 +14,7 @@
       "id" : 9,
       "_links" : {
         "self" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/users/9{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/users/9{?projection}",
           "templated" : true
         }
       }
@@ -43,7 +43,7 @@
         "id" : 8,
         "_links" : {
           "self" : {
-            "href" : "https://int.insula.earth/secure/api/v2.0/users/8{?projection}",
+            "href" : "https://processing.example.com/secure/api/v2.0/users/8{?projection}",
             "templated" : true
           }
         }
@@ -51,15 +51,15 @@
       "id" : 2,
       "_links" : {
         "owner" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/2/owner{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/2/owner{?projection}",
           "templated" : true
         },
         "contextFiles" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/2/contextFiles{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/2/contextFiles{?projection}",
           "templated" : true
         },
         "self" : {
-          "href" : "https://int.insula.earth/secure/api/v2.0/services/2{?projection}",
+          "href" : "https://processing.example.com/secure/api/v2.0/services/2{?projection}",
           "templated" : true
         }
       }
@@ -67,21 +67,21 @@
   },
   "_links" : {
     "self" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039"
+      "href" : "https://processing.example.com/secure/api/v2.0/jobConfigs/3039"
     },
     "jobConfig" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039"
+      "href" : "https://processing.example.com/secure/api/v2.0/jobConfigs/3039"
     },
     "owner" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/owner{?projection}",
+      "href" : "https://processing.example.com/secure/api/v2.0/jobConfigs/3039/owner{?projection}",
       "templated" : true
     },
     "service" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/service{?projection}",
+      "href" : "https://processing.example.com/secure/api/v2.0/jobConfigs/3039/service{?projection}",
       "templated" : true
     },
     "parent" : {
-      "href" : "https://int.insula.earth/secure/api/v2.0/jobConfigs/3039/parent{?projection}",
+      "href" : "https://processing.example.com/secure/api/v2.0/jobConfigs/3039/parent{?projection}",
       "templated" : true
     }
   }

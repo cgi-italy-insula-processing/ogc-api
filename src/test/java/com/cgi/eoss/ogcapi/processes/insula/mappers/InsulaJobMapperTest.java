@@ -620,16 +620,16 @@ public class InsulaJobMapperTest {
                 OutputFile.builder()
                         .filename("file.tiff")
                         .links(Map.of("download",
-                                org.springframework.hateoas.Link.of("http://eopaas-int-server:8090/secure/api/v2.0/files/1?token=abc#frag")))
+                                org.springframework.hateoas.Link.of("http://eoepca-server-service:8090/secure/api/v2.0/files/1?token=abc#frag")))
                         .build()
         );
 
         Link expectedLink = new Link();
-        expectedLink.setHref("https://int.insula.earth/secure/api/v2.0/files/1?token=abc#frag");
+        expectedLink.setHref("https://processing.example.com/secure/api/v2.0/files/1?token=abc#frag");
         expectedLink.setRel("download");
         expectedLink.setTitle("Download file.tiff");
 
-        URI targetBaseUri = URI.create("https://int.insula.earth");
+        URI targetBaseUri = URI.create("https://processing.example.com");
         InlineOrRefData actual = toOutput(outputId, outputs, outputFiles, targetBaseUri);
         assertThat(actual).isInstanceOf(InputValueNoObjectArray.class);
         InputValueNoObjectArray<InlineOrRefData> actualArray = (InputValueNoObjectArray<InlineOrRefData>) actual;
@@ -648,16 +648,16 @@ public class InsulaJobMapperTest {
                 OutputFile.builder()
                         .filename("file.tiff")
                         .links(Map.of("download",
-                                org.springframework.hateoas.Link.of("https://eopaas-int-server:8090/secure/api/v2.0/platformFiles/4864{?projection}/dl?token=abc#frag")))
+                                org.springframework.hateoas.Link.of("https://eoepca-server-service:8090/secure/api/v2.0/platformFiles/4864{?projection}/dl?token=abc#frag")))
                         .build()
         );
         Link expectedLink = new Link();
-        expectedLink.setHref("http://int.insula.earth/secure/api/v2.0/platformFiles/4864{?projection}/dl?token=abc#frag");
+        expectedLink.setHref("http://processing.example.com/secure/api/v2.0/platformFiles/4864{?projection}/dl?token=abc#frag");
         expectedLink.setRel("download");
         expectedLink.setTitle("Download file.tiff");
 
 
-        URI targetBaseUri = URI.create("http://int.insula.earth");
+        URI targetBaseUri = URI.create("http://processing.example.com");
         InlineOrRefData actual = toOutput(outputId, outputs, outputFiles, targetBaseUri);
         assertThat(actual).isInstanceOf(InputValueNoObjectArray.class);
         InputValueNoObjectArray<InlineOrRefData> actualArray = (InputValueNoObjectArray<InlineOrRefData>) actual;
@@ -675,11 +675,11 @@ public class InsulaJobMapperTest {
         List<OutputFile> outputFiles = List.of(
                 OutputFile.builder()
                         .filename("file.tiff")
-                        .links(Map.of("download", org.springframework.hateoas.Link.of("http://eopaas-int-server:8090/secure/api/v2.0/files/1")))
+                        .links(Map.of("download", org.springframework.hateoas.Link.of("http://eoepca-server-service:8090/secure/api/v2.0/files/1")))
                         .build()
         );
         Link expectedLink = new Link();
-        expectedLink.setHref("http://eopaas-int-server:8090/secure/api/v2.0/files/1");
+        expectedLink.setHref("http://eoepca-server-service:8090/secure/api/v2.0/files/1");
         expectedLink.setRel("download");
         expectedLink.setTitle("Download file.tiff");
 
@@ -713,7 +713,7 @@ public class InsulaJobMapperTest {
         expectedLink.setRel("download");
         expectedLink.setTitle("Download file.tiff");
 
-        URI targetBaseUri = URI.create("http://int.insula.earth");
+        URI targetBaseUri = URI.create("http://processing.example.com");
         InlineOrRefData actual = toOutput(outputId, outputs, outputFiles, targetBaseUri);
         assertThat(actual).isInstanceOf(InputValueNoObjectArray.class);
         InputValueNoObjectArray<InlineOrRefData> actualArray = (InputValueNoObjectArray<InlineOrRefData>) actual;

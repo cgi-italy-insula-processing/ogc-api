@@ -87,12 +87,12 @@
         {
           "title": "platformFile",
           "rel": "platformFile",
-          "href": "https://int.insula.earth/secure/api/v2.0/search/products/platform/5395"
+          "href": "https://processing.example.com/secure/api/v2.0/search/products/platform/5395"
         },
         {
           "title": "download",
           "rel": "download",
-          "href": "https://int.insula.earth/secure/api/v2.0/search/dl/platform/5395"
+          "href": "https://processing.example.com/secure/api/v2.0/search/dl/platform/5395"
         },
         {
           "title": "platform",
