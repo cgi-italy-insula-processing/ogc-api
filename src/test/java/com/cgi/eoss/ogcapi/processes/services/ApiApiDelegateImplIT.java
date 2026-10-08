@@ -43,7 +43,8 @@ public abstract class ApiApiDelegateImplIT {
 
             String swaggerIndexContent = mockMvc.perform(get(swaggerExpectedPath)
                             .header("user", "user")
-                            .header("tenant", "tenant"))
+                            .header("tenant", "tenant")
+                            .contextPath(CONTEXT_PATH))
                     .andExpect(status().isOk())
                     .andReturn().getResponse().getContentAsString();
 
@@ -86,7 +87,8 @@ public abstract class ApiApiDelegateImplIT {
             String expectedRedirectUrl = "http://localhost" + swaggerExpectedPath;
             assertThat(redirectUrl).isEqualTo(expectedRedirectUrl);
 
-            String swaggerIndexContent = mockMvc.perform(get(swaggerExpectedPath))
+            String swaggerIndexContent = mockMvc.perform(get(swaggerExpectedPath)
+                            .contextPath(CONTEXT_PATH))
                     .andExpect(header().doesNotExist("user"))
                     .andExpect(header().doesNotExist("tenant"))
                     .andExpect(status().isOk())
