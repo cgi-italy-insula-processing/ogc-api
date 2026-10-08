@@ -1,10 +1,26 @@
-# OGC API - Processes facade
+# OGC API - Processes adapter for EOEPCA
 
 Spring Boot service implementing [OGC API - Processes](https://ogcapi.ogc.org/processes/)
 Part 1 (Core) and Part 2 (Deploy, Replace, Undeploy) on top of the processing server REST
 API of [insula](https://github.com/cgi-italy-insula-processing/insula). It translates OGC
 requests (process deployment from an OGC Application Package, execution, job status,
 results) into calls to the processing server, which runs the jobs as Argo Workflows.
+
+This document describes how the service is adopted in the EOEPCA processing building block.
+
+## What the EOEPCA deployment adopts
+
+- **Processing server:** the open-source processing server, reached through its in-cluster
+  Service `<release>-server-service` on port 8090 (`/secure/api/v2.0`).
+- **Features disabled:** the open-source processing server has no authentication, no search
+  endpoint and no cost estimation, so `ogcapi.processes.security.enabled`,
+  `ogcapi.processes.insula.searchApi.enabled` and `ogcapi.processes.job.costEstimate.enabled`
+  are set to `false`; with any of them `true`, requests fail.
+  `ogcapi.processes.insula.getSubJobsApi.enabled` is also `false`.
+- **Ingress:** the API is served under the `/ogcapi` context path and builds its links from
+  the ingress `X-Forwarded-*` headers (`server.forward-headers-strategy=native`), so they keep
+  https.
+- **Image:** `ghcr.io/cgi-italy-insula-processing/com.cgi.eoss.ogc/ogc-api-processes`.
 
 ## Configuration
 
